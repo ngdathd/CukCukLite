@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_background_for_bill"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/my_primary"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.AppCompatImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="?android:attr/actionBarSize"
+            android:layout_height="?android:attr/actionBarSize"
+            android:background="@drawable/bg_action_bar_selector"
+            app:srcCompat="@drawable/ic_arrow_back" />
+
+        <TextView
+            android:id="@id/tvTitle"
+            style="@style/TextTitlePage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/title_charges" />
+
+        <TextView
+            android:id="@+id/btnActionDone"
+            style="@style/ButtonDefaultActionBar"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:text="@string/done"
+            tools:ignore="RelativeOverlap" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="@dimen/margin_medium"
+        android:layout_marginRight="@dimen/margin_medium"
+        android:layout_marginBottom="@dimen/margin_normal"
+        android:layout_weight="1.0"
+        android:background="@android:color/transparent"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:id="@+id/svContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical"
+            tools:ignore="UselessParent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="@dimen/margin_normal"
+                    android:layout_weight="1.0"
+                    android:background="@color/color_white"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_normal"
+                        android:background="@color/color_white"
+                        android:orientation="vertical"
+                        android:padding="@dimen/margin_normal">
+
+                        <TextView
+                            style="@style/TextViewDefaultBold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_horizontal"
+                            android:text="@string/title_bill"
+                            android:textAllCaps="true"
+                            android:textSize="@dimen/font_size_medium" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="@dimen/margin_small"
+                            android:gravity="center_horizontal"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/TextViewDefaultBoldSingleLine"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="@string/label_number" />
+
+                            <TextView
+                                android:id="@+id/tvRefNo"
+                                style="@style/TextViewDefaultBoldSingleLine"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="@dimen/margin_normal"
+                                android:layout_marginLeft="@dimen/margin_normal"
+                                android:text="@string/key_order_0001" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/lnTable"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/TextViewDefaultBoldSingleLine"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1.5"
+                                android:text="@string/label_table" />
+
+                            <TextView
+                                android:id="@+id/tvTableName"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="8.5"
+                                android:text="@string/key2"
+                                android:textColor="@color/color_black"
+                                android:textSize="@dimen/font_size_normal" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/TextViewDefaultBoldSingleLine"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1.5"
+                                android:text="@string/label_date" />
+
+                            <TextView
+                                android:id="@+id/tvRefDate"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="8.5"
+                                android:text="@string/date_time_pay"
+                                android:textColor="@color/color_black"
+                                android:textSize="@dimen/font_size_normal" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnOrderDetails"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_normal"
+                        android:layout_marginRight="@dimen/margin_normal"
+                        android:background="@drawable/bg_transparent_with_border_no_radius_selector"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="7.0">
+
+                            <TextView
+                                style="@style/TextViewTitleTableBill"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2.4"
+                                android:text="@string/title_product_name"
+                                android:textSize="@dimen/font_size_normal" />
+
+                            <TextView
+                                style="@style/TextViewTitleTableBill"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.8"
+                                android:text="@string/title_quantity_short"
+                                android:textSize="@dimen/font_size_normal" />
+
+                            <TextView
+                                style="@style/TextViewTitleTableBill"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.5"
+                                android:gravity="end"
+                                android:text="@string/title_unit_price"
+                                android:textSize="@dimen/font_size_normal" />
+
+                            <TextView
+                                style="@style/TextViewTitleTableBill"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.2"
+                                android:textSize="@dimen/font_size_normal" />
+
+                            <TextView
+                                style="@style/TextViewTitleTableBill"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2.1"
+                                android:gravity="end"
+                                android:paddingEnd="@dimen/margin_normal"
+                                android:paddingRight="@dimen/margin_normal"
+                                android:text="@string/into_money"
+                                android:textSize="@dimen/font_size_normal"
+                                tools:ignore="RtlSymmetry" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.100000024dp"
+                            android:background="@color/color_dark_gray" />
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/rcvDetail"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scrollbars="none" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.100000024dp"
+                            android:background="@color/color_dark_gray" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/margin_normal"
+                        android:paddingTop="@dimen/margin_normal"
+                        android:paddingRight="@dimen/margin_normal"
+                        android:paddingBottom="@dimen/margin_normal">
+
+                        <TextView
+                            style="@style/TextViewDefaultBoldSingleLine"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.0"
+                            android:text="@string/title_remain_amount"
+                            android:textSize="@dimen/font_size_medium_small" />
+
+                        <TextView
+                            android:id="@+id/tvTotalAmount"
+                            style="@style/TextViewDefaultBoldSingleLine"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/key0"
+                            android:textSize="@dimen/font_size_medium_small" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.100000024dp"
+                        android:layout_marginLeft="@dimen/margin_normal"
+                        android:layout_marginRight="@dimen/margin_normal"
+                        android:background="@color/color_dark_gray" />
+
+                    <LinearLayout
+                        android:id="@+id/lnCustomerAmount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_normal"
+                        android:layout_marginRight="@dimen/margin_normal"
+                        android:background="@drawable/bg_transparent_no_border_no_radius_selector"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingTop="@dimen/margin_normal_small"
+                        android:paddingBottom="@dimen/margin_normal_small">
+
+                        <TextView
+                            style="@style/TextViewDefaultSingleLine"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.0"
+                            android:text="@string/title_guest_amount"
+                            android:textColor="@color/my_primary"
+                            android:textSize="@dimen/font_size_medium_small" />
+
+                        <TextView
+                            android:id="@+id/tvCustomerAmount"
+                            style="@style/TextViewDefaultSingleLine"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/key0"
+                            android:textColor="@color/my_primary"
+                            android:textSize="@dimen/font_size_medium_small" />
+
+                        <android.support.v7.widget.AppCompatImageView
+                            android:layout_width="28.0dp"
+                            android:layout_height="28.0dp"
+                            android:layout_marginEnd="-8.0dp"
+                            android:layout_marginRight="-8.0dp"
+                            app:srcCompat="@drawable/ic_chevron_right" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.100000024dp"
+                        android:layout_marginLeft="@dimen/margin_normal"
+                        android:layout_marginRight="@dimen/margin_normal"
+                        android:background="@color/color_dark_gray" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_footer_bill"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/margin_normal"
+                        android:paddingTop="@dimen/margin_normal"
+                        android:paddingRight="@dimen/margin_normal"
+                        android:paddingBottom="@dimen/margin_normal">
+
+                        <TextView
+                            style="@style/TextViewDefaultSingleLine"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.0"
+                            android:text="@string/title_return_amount"
+                            android:textSize="@dimen/font_size_medium_small" />
+
+                        <TextView
+                            android:id="@+id/tvReturnAmount"
+                            style="@style/TextViewDefaultSingleLine"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="@string/key0"
+                            android:textSize="@dimen/font_size_medium_small" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <vn.misa.nadat.cukcuklite.customviews.OrderBottomView
+                    android:layout_width="match_parent"
+                    android:layout_height="8.0dp" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnDone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_large_small"
+        android:layout_marginRight="@dimen/margin_large_small"
+        android:layout_marginBottom="@dimen/margin_normal"
+        android:background="@drawable/bg_primary_no_border_with_radius_selector"
+        android:text="@string/done"
+        android:textAllCaps="true"
+        android:textColor="@color/color_white"
+        android:textSize="@dimen/font_size_medium_small" />
+</LinearLayout>

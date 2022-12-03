@@ -1,0 +1,87 @@
+<resources>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="nav_header_height">176dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="font_size_normal">14sp</dimen>
+    <dimen name="font_size_medium">20sp</dimen>
+    <dimen name="font_size_medium_small">17sp</dimen>
+    <dimen name="margin_normal_small">5dp</dimen>
+
+    <dimen name="margin_large_small">16dp</dimen>
+    <dimen name="margin_medium">12dp</dimen>
+    <dimen name="margin_medium_small">10dp</dimen>
+    <dimen name="icon_avatar_size">68dp</dimen>
+    <dimen name="margin_large">20dp</dimen>
+    <dimen name="margin_normal">8dp</dimen>
+    <dimen name="margin_extra_large">25dp</dimen>
+    <dimen name="inventory_item_bg_size_detail">52dp</dimen>
+    <dimen name="icon_inventory_item_size_detail">45dp</dimen>
+
+    <dimen name="font_size_large_small">23sp</dimen>
+    <dimen name="height_keyboard_payment">50dp</dimen>
+    <dimen name="margin_keyboard">7dp</dimen>
+    <dimen name="btn_payment_fragment_10">20sp</dimen>
+    <dimen name="radius_default">3dp</dimen>
+    <dimen name="height_keyboard">48dp</dimen>
+
+    <dimen name="padding_top_textview_number_dark">6dp</dimen>
+    <dimen name="padding_dialog_key_10">10dp</dimen>
+    <dimen name="margin_small_small">1.5dp</dimen>
+    <dimen name="size_edittext_keyboard">22sp</dimen>
+    <dimen name="margin_small">3dp</dimen>
+    <dimen name="min_height_message_dialog">85dp</dimen>
+    <dimen name="height_button_dialog">40dp</dimen>
+    <dimen name="icon_selected_item_size">28dp</dimen>
+    <dimen name="inventory_item_bg_size">48dp</dimen>
+    <dimen name="item_order_default_height">140dp</dimen>
+    <dimen name="size_tab_bar">48dp</dimen>
+    <dimen name="icon_inventory_item_size">40dp</dimen>
+    <dimen name="menu_height_inventory_item">64dp</dimen>
+    <dimen name="font_size_normal_small">12sp</dimen>
+    <dimen name="icon_margin">8dp</dimen>
+    <dimen name="color_item_margin">8dp</dimen>
+    <dimen name="layout_margin">16dp</dimen>
+    <dimen name="layout_margin_left_right">16dp</dimen>
+    <dimen name="layout_margin_top_bot">16dp</dimen>
+    <dimen name="padding_circle_img">4dp</dimen>
+    <dimen name="height_header_main">200dp</dimen>
+    <dimen name="size_icon_table_sale">64dp</dimen>
+    <dimen name="font_size_large">26sp</dimen>
+    <dimen name="height_button_default">48dp</dimen>
+
+    <dimen name="margin_padding_haft">4dp</dimen>
+    <dimen name="circle_size">48dp</dimen>
+    <dimen name="image_circle_size">36dp</dimen>
+    <dimen name="font_button">20sp</dimen>
+    <dimen name="margin_padding_default">16dp</dimen>
+    <dimen name="size_title_bar">48dp</dimen>
+    <dimen name="min_width_text_view_quantity">40dp</dimen>
+    <dimen name="font_large">16sp</dimen>
+    <dimen name="height_large">50dp</dimen>
+    <dimen name="padding_normal">10dp</dimen>
+    <dimen name="font_normal">14sp</dimen>
+    <dimen name="padding_small">5dp</dimen>
+    <dimen name="radius_normal">3dp</dimen>
+    <dimen name="separate_height_normal">0.5dp</dimen>
+    <dimen name="tv_size_unit_chart">10sp</dimen>
+    <dimen name="item_report_height">45.0dip</dimen>
+    <dimen name="icon_bg_report_size">40.0dip</dimen>
+    <dimen name="icon_report_size">24.0dip</dimen>
+    <dimen name="icon_bg_report_detail_size">35.0dip</dimen>
+    <dimen name="font_medium">12sp</dimen>
+    <dimen name="width_giant">120dp</dimen>
+    <dimen name="height_giant">240dp</dimen>
+    <dimen name="padding_large_small">32dp</dimen>
+    <dimen name="padding_large">40dp</dimen>
+    <dimen name="margin_normal_large">16dp</dimen>
+    <dimen name="font_huge">18dp</dimen>
+    <dimen name="text_size_title">20sp</dimen>
+    <dimen name="action_button_height">56dp</dimen>
+    <dimen name="corner_radius_btn">4dp</dimen>
+    <dimen name="text_size_normal">16sp</dimen>
+    <dimen name="item_restaurant_type_height">48dp</dimen>
+    <dimen name="diliver_height">0.6dp</dimen>
+</resources>
