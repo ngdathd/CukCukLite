@@ -1,0 +1,386 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_title_dialog" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="10.0dip"
+        android:paddingTop="5.0dip"
+        android:paddingRight="10.0dip"
+        android:paddingBottom="15.0dip">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5.0dip"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            android:weightSum="4.0">
+
+            <LinearLayout
+                android:layout_width="0.0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="4.0"
+                android:descendantFocusability="beforeDescendants"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/dialog_key_txtMoney"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_keyboard"
+                    android:layout_margin="@dimen/margin_keyboard"
+                    android:background="@drawable/bg_white_with_border_and_radius"
+                    android:ellipsize="none"
+                    android:gravity="center|right"
+                    android:paddingLeft="@dimen/margin_normal_small"
+                    android:paddingRight="@dimen/margin_normal_small"
+                    android:singleLine="true"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/size_edittext_keyboard"
+                    android:textStyle="bold">
+
+                    <requestFocus />
+                </EditText>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            android:weightSum="4.0">
+
+            <TextView
+                android:id="@+id/dialog_key_btnKeyClear"
+                style="@style/TextViewNumberDark"
+                android:layout_width="0.0dip"
+                android:layout_height="@dimen/height_keyboard"
+                android:layout_margin="@dimen/margin_keyboard"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:paddingTop="@dimen/padding_dialog_key_10"
+                android:paddingBottom="@dimen/padding_dialog_key_10"
+                android:text="@string/keyClear"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/dialog_key_btnKeyMinus"
+                style="@style/TextViewNumberDark"
+                android:layout_width="0.0dip"
+                android:layout_height="@dimen/height_keyboard"
+                android:layout_margin="@dimen/margin_keyboard"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:paddingTop="@dimen/padding_dialog_key_10"
+                android:paddingBottom="@dimen/padding_dialog_key_10"
+                android:text="@string/str_minus"
+                android:textSize="@dimen/font_size_normal"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/dialog_key_btnKeyPlus"
+                style="@style/TextViewNumberDark"
+                android:layout_width="0.0dip"
+                android:layout_height="@dimen/height_keyboard"
+                android:layout_margin="@dimen/margin_keyboard"
+                android:layout_marginRight="0.5dip"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:paddingTop="@dimen/padding_dialog_key_10"
+                android:paddingBottom="@dimen/padding_dialog_key_10"
+                android:text="@string/str_plus"
+                android:textSize="@dimen/font_size_normal"
+                android:textStyle="normal" />
+
+            <ImageButton
+                android:id="@+id/dialog_key_btnKeyBack"
+                style="@style/TextViewNumberDark"
+                android:layout_width="0.0dip"
+                android:layout_height="@dimen/height_keyboard"
+                android:layout_margin="@dimen/margin_keyboard"
+                android:layout_weight="1.0"
+                android:contentDescription="@string/img_content_description"
+                android:src="@drawable/ic_back_keyboard" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            android:weightSum="4.0">
+
+            <TextView
+                android:id="@+id/dialog_key_btnKey7"
+                style="@style/TextViewNumberDark"
+                android:layout_width="0.0dip"
+                android:layout_height="@dimen/height_keyboard"
+                android:layout_margin="@dimen/margin_keyboard"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:paddingTop="@dimen/padding_dialog_key_10"
+                android:paddingBottom="@dimen/padding_dialog_key_10"
+                android:text="@string/key7"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/dialog_key_btnKey8"
+                style="@style/TextViewNumberDark"
+                android:layout_width="0.0dip"
+                android:layout_height="@dimen/height_keyboard"
+                android:layout_margin="@dimen/margin_keyboard"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:paddingTop="@dimen/padding_dialog_key_10"
+                android:paddingBottom="@dimen/padding_dialog_key_10"
+                android:text="@string/key8"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/dialog_key_btnKey9"
+                style="@style/TextViewNumberDark"
+                android:layout_width="0.0dip"
+                android:layout_height="@dimen/height_keyboard"
+                android:layout_margin="@dimen/margin_keyboard"
+                android:layout_marginRight="0.5dip"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:paddingTop="@dimen/padding_dialog_key_10"
+                android:paddingBottom="@dimen/padding_dialog_key_10"
+                android:text="@string/key9"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/tv_key_minus"
+                style="@style/TextViewNumberDark"
+                android:layout_width="0.0dip"
+                android:layout_height="@dimen/height_keyboard"
+                android:layout_margin="@dimen/margin_keyboard"
+                android:layout_marginRight="0.5dip"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:paddingTop="@dimen/padding_dialog_key_10"
+                android:paddingBottom="@dimen/padding_dialog_key_10"
+                android:text="@string/minus"
+                android:textStyle="normal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            android:weightSum="4.0">
+
+            <TextView
+                android:id="@+id/dialog_key_btnKey4"
+                style="@style/TextViewNumberDark"
+                android:layout_width="0.0dip"
+                android:layout_height="@dimen/height_keyboard"
+                android:layout_margin="@dimen/margin_keyboard"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:paddingTop="@dimen/padding_dialog_key_10"
+                android:paddingBottom="@dimen/padding_dialog_key_10"
+                android:text="@string/key4"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/dialog_key_btnKey5"
+                style="@style/TextViewNumberDark"
+                android:layout_width="0.0dip"
+                android:layout_height="@dimen/height_keyboard"
+                android:layout_margin="@dimen/margin_keyboard"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:paddingTop="@dimen/padding_dialog_key_10"
+                android:paddingBottom="@dimen/padding_dialog_key_10"
+                android:text="@string/key5"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/dialog_key_btnKey6"
+                style="@style/TextViewNumberDark"
+                android:layout_width="0.0dip"
+                android:layout_height="@dimen/height_keyboard"
+                android:layout_margin="@dimen/margin_keyboard"
+                android:layout_marginRight="0.5dip"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:paddingTop="@dimen/padding_dialog_key_10"
+                android:paddingBottom="@dimen/padding_dialog_key_10"
+                android:text="@string/key6"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/tv_key_plus"
+                style="@style/TextViewNumberDark"
+                android:layout_width="0.0dip"
+                android:layout_height="@dimen/height_keyboard"
+                android:layout_margin="@dimen/margin_keyboard"
+                android:layout_marginRight="0.5dip"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:paddingTop="@dimen/padding_dialog_key_10"
+                android:paddingBottom="@dimen/padding_dialog_key_10"
+                android:text="@string/plus"
+                android:textStyle="normal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            android:weightSum="4.0">
+
+            <TextView
+                android:id="@+id/dialog_key_btnKey1"
+                style="@style/TextViewNumberDark"
+                android:layout_width="0.0dip"
+                android:layout_height="@dimen/height_keyboard"
+                android:layout_margin="@dimen/margin_keyboard"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:paddingTop="@dimen/padding_dialog_key_10"
+                android:paddingBottom="@dimen/padding_dialog_key_10"
+                android:text="@string/key1"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/dialog_key_btnKey2"
+                style="@style/TextViewNumberDark"
+                android:layout_width="0.0dip"
+                android:layout_height="@dimen/height_keyboard"
+                android:layout_margin="@dimen/margin_keyboard"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:paddingTop="@dimen/padding_dialog_key_10"
+                android:paddingBottom="@dimen/padding_dialog_key_10"
+                android:text="@string/key2"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/dialog_key_btnKey3"
+                style="@style/TextViewNumberDark"
+                android:layout_width="0.0dip"
+                android:layout_height="@dimen/height_keyboard"
+                android:layout_margin="@dimen/margin_keyboard"
+                android:layout_marginRight="0.5dip"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:paddingTop="@dimen/padding_dialog_key_10"
+                android:paddingBottom="@dimen/padding_dialog_key_10"
+                android:text="@string/key3"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/dialog_key_btnKeyNegative"
+                style="@style/TextViewNumberDark"
+                android:layout_width="0.0dip"
+                android:layout_height="@dimen/height_keyboard"
+                android:layout_margin="@dimen/margin_keyboard"
+                android:layout_marginRight="0.5dip"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:paddingTop="@dimen/padding_dialog_key_10"
+                android:paddingBottom="@dimen/padding_dialog_key_10"
+                android:text="±"
+                android:textStyle="normal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            android:weightSum="4.0">
+
+            <TextView
+                android:id="@+id/dialog_key_btnKey0"
+                style="@style/TextViewNumberDark"
+                android:layout_width="0.0dip"
+                android:layout_height="@dimen/height_keyboard"
+                android:layout_margin="@dimen/margin_keyboard"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:paddingTop="@dimen/padding_dialog_key_10"
+                android:paddingBottom="@dimen/padding_dialog_key_10"
+                android:text="@string/key0"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/dialog_key_btnKey000"
+                style="@style/TextViewNumberDark"
+                android:layout_width="0.0dip"
+                android:layout_height="@dimen/height_keyboard"
+                android:layout_margin="@dimen/margin_keyboard"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:paddingTop="@dimen/padding_dialog_key_10"
+                android:paddingBottom="@dimen/padding_dialog_key_10"
+                android:text="@string/key000"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/dialog_key_btnKeyComma"
+                style="@style/TextViewNumberDark"
+                android:layout_width="0.0dip"
+                android:layout_height="@dimen/height_keyboard"
+                android:layout_margin="@dimen/margin_keyboard"
+                android:layout_marginRight="0.5dp"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:paddingTop="@dimen/padding_dialog_key_10"
+                android:paddingBottom="@dimen/padding_dialog_key_10"
+                android:text=","
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/dialog_key_btnAccept"
+                android:layout_width="0.0dip"
+                android:layout_height="@dimen/height_keyboard"
+                android:layout_margin="@dimen/margin_keyboard"
+                android:layout_marginRight="0.5dip"
+                android:layout_weight="1.0"
+                android:background="@drawable/bg_primary_no_border_with_radius_selector"
+                android:gravity="center"
+                android:paddingLeft="@dimen/margin_small_small"
+                android:paddingTop="@dimen/padding_dialog_key_10"
+                android:paddingRight="@dimen/margin_small_small"
+                android:paddingBottom="@dimen/padding_dialog_key_10"
+                android:text="@string/btn_done"
+                android:textColor="@color/color_white"
+                android:textStyle="normal"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/tv_key_equal"
+                android:layout_width="0.0dip"
+                android:layout_height="@dimen/height_keyboard"
+                android:layout_margin="@dimen/margin_keyboard"
+                android:layout_marginRight="0.5dip"
+                android:layout_weight="1.0"
+                android:background="@drawable/bg_primary_no_border_with_radius_selector"
+                android:gravity="center"
+                android:paddingLeft="@dimen/margin_small_small"
+                android:paddingTop="@dimen/padding_dialog_key_10"
+                android:paddingRight="@dimen/margin_small_small"
+                android:paddingBottom="@dimen/padding_dialog_key_10"
+                android:text="@string/btn_equal"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/font_size_medium"
+                android:textStyle="normal"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

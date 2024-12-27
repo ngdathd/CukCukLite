@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="vn.misa.nadat.cukcuklite">
+    package="vn.misa.nadat.cucuclite">
 
     <application
-        android:name=".CukCukLiteApp"
+        android:name=".MvpApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -11,28 +11,18 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".ui.main.MainActivity"
+            android:name=".ui.menu.MenuActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".ui.choosedish.ChooseDishActivity">
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.addeditdish.AddEditDishActivity" />
-        <activity android:name=".ui.unit.UnitActivity" />
-        <activity android:name=".ui.payment.PaymentActivity" />
-        <activity android:name=".ui.revenue.ReportRevenueActivity" />
-        <activity android:name=".ui.splash.SplashActivity" >
-            <!--<intent-filter>-->
-                <!--<action android:name="android.intent.action.MAIN" />-->
-
-                <!--<category android:name="android.intent.category.LAUNCHER" />-->
-            <!--</intent-filter>-->
-        </activity>
-        <activity android:name=".ui.chooserestaurant.ChooseRestaurantTypeActivity" />
+        <activity android:name=".ui.dish.AddDishActivity" />
+        <activity android:name=".ui.unit.SelectUnitActivity" />
+        <activity android:name=".ui.dish.EditDishActivity" />
     </application>
 
 </manifest>

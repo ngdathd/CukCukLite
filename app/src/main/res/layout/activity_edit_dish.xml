@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/color_white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/my_primary"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/imgBtnBack"
+            android:layout_width="?android:attr/actionBarSize"
+            android:layout_height="?android:attr/actionBarSize"
+            android:background="@drawable/bg_action_bar_selector"
+            android:src="@drawable/ic_arrow_back" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            style="@style/TextTitlePage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Sửa món" />
+
+        <TextView
+            android:id="@+id/btnDone"
+            style="@style/TextActionTitlePage"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/bg_action_bar_selector"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/margin_medium"
+            android:paddingRight="@dimen/margin_medium"
+            android:text="@string/Save" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="1.0">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_weight="1.0"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/margin_normal_small">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:orientation="horizontal">
+
+                <vn.misa.nadat.cucuclite.customviews.TextViewRequire
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    android:text="@string/inventoryitem_name"
+                    android:textSize="@dimen/font_size_normal" />
+
+                <EditText
+                    android:id="@+id/edInventoryItemName"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_extra_large"
+                    android:layout_weight="1.0"
+                    android:background="@android:color/transparent"
+                    android:gravity="right"
+                    android:hint="@string/inventory_item_name_hint"
+                    android:inputType="textCapSentences"
+                    android:paddingTop="@dimen/margin_medium"
+                    android:paddingBottom="@dimen/margin_medium"
+                    android:textSize="@dimen/font_size_medium_small" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0.6dip"
+                android:background="@color/color_divider" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_normal_small"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.35"
+                    android:text="@string/inventory_item_price"
+                    android:textSize="@dimen/font_size_normal" />
+
+                <LinearLayout
+                    android:id="@+id/lnUnitPrice"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvPrice"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:gravity="right"
+                        android:paddingTop="@dimen/margin_medium"
+                        android:paddingBottom="@dimen/margin_medium"
+                        android:textColor="@color/color_text_main"
+                        android:textSize="@dimen/font_size_medium_small" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:scaleType="center"
+                        android:src="@drawable/ic_chevron_right" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0.6dip"
+                android:background="@color/color_divider" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_normal_small"
+                android:orientation="horizontal">
+
+                <vn.misa.nadat.cucuclite.customviews.TextViewRequire
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.35"
+                    android:text="@string/unit"
+                    android:textSize="@dimen/font_size_normal" />
+
+                <LinearLayout
+                    android:id="@+id/lnUnitName"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvUnitName"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:background="@android:color/transparent"
+                        android:gravity="right"
+                        android:hint="@string/unit_hint_select"
+                        android:paddingTop="@dimen/margin_medium"
+                        android:paddingBottom="@dimen/margin_medium"
+                        android:textColor="@color/color_text_main"
+                        android:textSize="@dimen/font_size_medium_small" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:scaleType="center"
+                        android:src="@drawable/ic_chevron_right" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0.6dip"
+                android:background="@color/color_divider" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_normal_small"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+                    android:text="@string/inventory_item_color"
+                    android:textSize="@dimen/font_size_normal" />
+
+                <LinearLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:id="@+id/realSelectColor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/img_bg_color"
+                            android:layout_width="@dimen/inventory_item_bg_size_detail"
+                            android:layout_height="@dimen/inventory_item_bg_size_detail" />
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/img_select_color"
+                            android:layout_width="@dimen/icon_inventory_item_size_detail"
+                            android:layout_height="@dimen/icon_inventory_item_size_detail"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/bg_circle_image_view"
+                            android:padding="4dp"
+                            android:src="@drawable/ic_select_color" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/margin_medium"
+                        android:text="@string/inventory_item_icon"
+                        android:textSize="@dimen/font_size_normal" />
+
+                    <RelativeLayout
+                        android:id="@+id/realSelectIcon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_medium">
+
+                        <ImageView
+                            android:id="@+id/img_bg_icon_color"
+                            android:layout_width="@dimen/inventory_item_bg_size_detail"
+                            android:layout_height="@dimen/inventory_item_bg_size_detail" />
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/img_select_icon"
+                            android:layout_width="@dimen/icon_inventory_item_size_detail"
+                            android:layout_height="@dimen/icon_inventory_item_size_detail"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/bg_circle_image_view"
+                            android:padding="4dp"
+                            android:src="@drawable/ic_default" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lnInactive"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.3"
+                    android:text="@string/inventory_item_state"
+                    android:textSize="@dimen/font_size_normal" />
+
+                <CheckBox
+                    android:id="@+id/cbInactive"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="-8.0dip"
+                    android:layout_weight="1.0"
+                    android:background="@android:color/transparent"
+                    android:paddingTop="@dimen/margin_medium"
+                    android:paddingBottom="@dimen/margin_medium"
+                    android:text="@string/inventory_item_inactive"
+                    android:textColor="@color/color_text_main"
+                    android:textSize="@dimen/font_size_medium_small" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_large_small"
+        android:layout_marginRight="@dimen/margin_large_small"
+        android:layout_marginBottom="@dimen/margin_normal"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/btnDelete"
+            style="@style/TextButtonDefault"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_medium"
+            android:layout_weight="1.0"
+            android:background="@drawable/selector_button_red_color"
+            android:text="@string/delete_upper"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/btnSave"
+            style="@style/TextButtonDefault"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:background="@drawable/selector_button_main_color"
+            android:text="@string/save_upper" />
+    </LinearLayout>
+</LinearLayout>

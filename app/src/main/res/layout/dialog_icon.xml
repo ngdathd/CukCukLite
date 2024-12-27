@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:layout_above="@id/btn_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <GridLayout
+            android:id="@+id/gl_icon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/layout_margin"
+            android:columnCount="5"/>
+    </ScrollView>
+    <Button
+        android:layout_marginEnd="@dimen/layout_margin_left_right"
+        android:layout_marginBottom="@dimen/layout_margin_top_bot"
+        android:id="@+id/btn_cancel"
+        android:background="@android:color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_cancel"
+        android:layout_marginRight="@dimen/layout_margin_left_right"
+        android:layout_alignParentRight="true" />
+</RelativeLayout>

@@ -1,6 +1,6 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/height_header_main"
+    android:layout_height="210dp"
     android:background="@drawable/bg_nav_header"
     android:gravity="center_vertical"
     android:orientation="vertical"
@@ -18,7 +18,7 @@
         android:layout_marginTop="@dimen/margin_large_small">
 
         <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/imgAvatar"
+            android:id="@+id/img_avatar"
             android:layout_width="@dimen/icon_avatar_size"
             android:layout_height="@dimen/icon_avatar_size"
             android:src="@drawable/default_avatar"

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#ff0973b9</color>
-    <color name="colorPrimaryDark">#ff0973b9</color>
+    <color name="colorPrimaryDark">#ff005082</color>
     <color name="colorAccent">#ff0973b9</color>
 
     <color name="color_text_main">#ff212121</color>
@@ -31,42 +31,8 @@
     <color name="gray_border_color">#d6d6d6</color>
     <color name="divider_color">#c7c6bd</color>
     <color name="red_dark">#c62c2c</color>
-    <color name="color_gray">#7a7a7a</color>
-    <color name="background_color_dark_gray">#d1d6dc</color>
-    <color name="color_primary_15">#daeaf5</color>
-    <color name="color_background_for_bill">#ffcac9cf</color>
-    <color name="color_green_dark">#ff05a055</color>
-    <color name="color_green_dark_selected">#ff08ba69</color>
-    <color name="color_header_table">#fff2f2f2</color>
-    <color name="color_primary_dark">#ff005082</color>
-    <color name="colorBackground">#d1d6dc</color>
-    <color name="colorBlue">#039be5</color>
-    <color name="colorBlueDark">#01579B</color>
-    <color name="colorBluePrimary">#ff0973b9</color>
-    <color name="colorBluePrimaryLight">#ff0199fc</color>
-    <color name="colorTextDarkGray">#ff373737</color>
-    <color name="dividerColorGray">#ffc7c6bd</color>
 
-    <string-array name="color_report">
-        <item>#ff9700</item>
-        <item>#2A93F3</item>
-        <item>#66BB6A</item>
-        <item>#F44336</item>
-        <item>#01579B</item>
-        <item>#7a7a7a</item>
-    </string-array>
-
-    <string-array name="color_detail_report">
-        <item>#2a96f3</item>
-        <item>#4faa52</item>
-        <item>#ff582b</item>
-        <item>#ffc000</item>
-        <item>#4471c4</item>
-        <item>#245e91</item>
-        <item>#a4a4a4</item>
-    </string-array>
-
-    <string-array name="color_default">
+    <string-array name="colordefault">
         <item>#26c6da</item>
         <item>#0097a7</item>
         <item>#0d47a1</item>
@@ -100,4 +66,5 @@
         <item>#607d8b</item>
         <item>#90a4ae</item>
     </string-array>
+
 </resources>
