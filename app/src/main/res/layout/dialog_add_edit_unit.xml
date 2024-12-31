@@ -1,53 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/dialog_note_root"
+    android:id="@+id/color_fragment_container"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/color_white"
-    android:orientation="vertical">
+    android:background="@color/colorGrayLight">
 
-    <include layout="@layout/view_title_dialog" />
-
-    <View
-        android:id="@+id/divider"
+    <TextView
+        android:id="@+id/tvTitle"
+        style="@style/TextViewTitleWhite"
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@drawable/divider_drawable" />
+        android:layout_height="62dp"
+        android:background="@color/colorBluePrimary"
+        android:padding="@dimen/padding_normal"
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_vertical"
-        android:minHeight="@dimen/min_height_message_dialog"
-        android:orientation="vertical"
-        android:paddingLeft="@dimen/margin_medium"
-        android:paddingTop="@dimen/margin_medium"
-        android:paddingRight="@dimen/margin_medium"
-        android:paddingBottom="@dimen/margin_medium">
-
-        <EditText
-            android:id="@+id/dialogNote"
-            style="@style/Widget.AppCompat.EditText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/transparent"
-            android:gravity="center_vertical"
-            android:hint="@string/edit_unit"
-            android:inputType="text"
-            android:scrollHorizontally="true"
-            android:textColor="@color/color_text_main"
-            tools:ignore="Autofill" />
-
-        <requestFocus android:layout_width="match_parent" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+    <ImageButton
+        android:id="@+id/btnClose"
+        android:padding="@dimen/padding_micro"
+        android:layout_width="@dimen/action_height"
+        android:layout_height="@dimen/action_height"
         android:layout_marginEnd="@dimen/margin_small"
-        android:layout_marginRight="@dimen/margin_small">
+        android:scaleType="fitXY"
+        android:background="@null"
+        android:contentDescription="@string/image_description"
+        app:layout_constraintBottom_toBottomOf="@id/tvTitle"
+        app:layout_constraintRight_toRightOf="@id/tvTitle"
+        app:layout_constraintTop_toTopOf="@id/tvTitle"
+        app:srcCompat="@drawable/ic_close_white" />
 
-        <include layout="@layout/view_button_dialog" />
-    </LinearLayout>
-</LinearLayout>
+    <EditText
+        android:id="@+id/etUnitName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:inputType="text"
+        android:padding="@dimen/padding_normal"
+        android:textColor="@color/colorTextDarkGray"
+        android:textSize="@dimen/text_size_normal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        tools:ignore="Autofill,LabelFor" />
+
+    <Button
+        android:id="@+id/btnYes"
+        style="@style/TextViewTitleWhite"
+        android:layout_width="@dimen/select_button_width"
+        android:layout_height="@dimen/select_button_height"
+        android:layout_margin="@dimen/margin_small"
+        android:background="@drawable/selector_button_blue"
+        android:text="@string/take"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etUnitName" />
+
+    <Button
+        android:id="@+id/btnNo"
+        style="@style/TextViewTitleWhite"
+        android:layout_width="@dimen/select_button_width"
+        android:layout_height="@dimen/select_button_height"
+        android:layout_margin="@dimen/margin_small"
+        android:background="@drawable/selector_button_white"
+        android:text="@string/cancel"
+        android:textColor="@drawable/selector_text_button_delete"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/btnYes"
+        app:layout_constraintTop_toBottomOf="@id/etUnitName" />
+</androidx.constraintlayout.widget.ConstraintLayout>

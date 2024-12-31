@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "46358472260",
+    "project_id": "cukcuklite-72a41",
+    "storage_bucket": "cukcuklite-72a41.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:46358472260:android:2223dccd3d80c844e7be11",
+        "android_client_info": {
+          "package_name": "com.ngdat.cukcuklite"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4SDfBV1P7Dqm5XXOSMqjebLFhH41MJM0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

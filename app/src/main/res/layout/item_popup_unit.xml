@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/lnDeleteUnit"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selector_button_gray"
+    android:clickable="true"
+    android:focusable="true"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingBottom="@dimen/padding_small"
+    android:paddingTop="@dimen/padding_small"
+    android:paddingStart="@dimen/padding_small"
+    android:paddingEnd="@dimen/padding_normal">
+
+    <ImageView
+        android:layout_width="@dimen/close_button_width"
+        android:layout_height="@dimen/close_button_height"
+        android:clickable="false"
+        android:contentDescription="@string/image_description"
+        app:srcCompat="@drawable/ic_close_red" />
+
+    <TextView
+        style="@style/TextViewNormal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_normal"
+        android:clickable="false"
+        android:text="@string/delete_unit" />
+</LinearLayout>

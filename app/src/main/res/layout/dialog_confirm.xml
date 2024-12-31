@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/color_fragment_container"
+    android:layout_width="@dimen/color_dialog_width"
+    android:layout_height="wrap_content"
+    android:background="@color/colorGrayLight">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        style="@style/TextViewTitleWhite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBluePrimary"
+        android:padding="@dimen/padding_small"
+        android:text="@string/cukcuk_like"
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:background="@null"
+        android:id="@+id/btnClose"
+        android:layout_width="@dimen/close_button_width"
+        android:layout_height="@dimen/close_button_height"
+        android:layout_marginEnd="@dimen/margin_small"
+        android:contentDescription="@string/image_description"
+        app:layout_constraintBottom_toBottomOf="@id/tvTitle"
+        app:layout_constraintRight_toRightOf="@id/tvTitle"
+        app:layout_constraintTop_toTopOf="@id/tvTitle"
+        app:srcCompat="@drawable/ic_close_white" />
+
+    <TextView
+        android:id="@+id/tvConfirm"
+        style="@style/TextViewNormal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:padding="@dimen/padding_normal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+    <Button
+        android:id="@+id/btnYes"
+        style="@style/TextViewTitleWhite"
+        android:layout_width="@dimen/select_button_width"
+        android:layout_height="@dimen/select_button_height"
+        android:layout_margin="@dimen/margin_small"
+        android:background="@drawable/selector_button_blue"
+        android:text="@string/yes"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvConfirm" />
+
+    <Button
+        android:id="@+id/btnNo"
+        style="@style/TextViewTitleWhite"
+        android:layout_width="@dimen/select_button_width"
+        android:layout_height="@dimen/select_button_height"
+        android:layout_margin="@dimen/margin_small"
+        android:background="@drawable/selector_button_white"
+        android:text="@string/no"
+        android:textColor="@drawable/selector_text_button_delete"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/btnYes"
+        app:layout_constraintTop_toBottomOf="@id/tvConfirm" />
+</androidx.constraintlayout.widget.ConstraintLayout>

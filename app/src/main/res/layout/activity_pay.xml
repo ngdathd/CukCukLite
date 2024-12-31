@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGrayNormal">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clActionbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/actionbar_height"
+        android:background="@color/colorBluePrimary">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="@dimen/actionbar_height"
+            android:layout_height="@dimen/actionbar_height"
+            android:background="?selectableItemBackground"
+            android:contentDescription="@string/image_description"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_back_white" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            style="@style/TextViewTitleWhite"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/actionbar_height"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/pay"
+            app:layout_constraintLeft_toRightOf="@id/btnBack"
+            app:layout_constraintRight_toLeftOf="@id/tvDone"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvDone"
+            style="@style/TextViewNormalWhite"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/actionbar_height"
+            android:background="?selectableItemBackground"
+            android:gravity="center"
+            android:padding="@dimen/padding_small"
+            android:text="@string/done"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btnDone"
+        android:layout_below="@id/clActionbar"
+        android:layout_margin="@dimen/margin_small">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/padding_normal"
+                android:paddingRight="@dimen/padding_normal">
+
+                <TextView
+                    style="@style/TextViewTitleWhite"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="@dimen/padding_small"
+                    android:text="@string/bill"
+                    android:textColor="@color/colorTextDarkGray"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextViewNormalBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/num" />
+
+                    <TextView
+                        android:id="@+id/tvBillNumber"
+                        style="@style/TextViewNormalBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/margin_small"
+                    android:paddingBottom="@dimen/padding_small">
+
+                    <TextView
+                        style="@style/TextViewNormalBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/margin_normal"
+                        android:text="@string/date" />
+
+                    <TextView
+                        android:id="@+id/tvDateCreated"
+                        style="@style/TextViewNormal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/background_bill_title_column"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/padding_micro"
+                    android:weightSum="@integer/weight_sum_bill">
+
+                    <TextView
+                        style="@style/TextViewNormalBold"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:text="@string/good_name" />
+
+                    <TextView
+                        style="@style/TextViewNormalBold"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:text="@string/quatity" />
+
+                    <TextView
+                        style="@style/TextViewNormalBold"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:text="@string/unit_price" />
+
+                    <TextView
+                        style="@style/TextViewNormalBold"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:text="@string/into_money" />
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvBill"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="-1dp"
+                    android:background="@drawable/background_bill_title_column" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextViewNormalBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/the_money_have_to_pay" />
+
+                    <TextView
+                        android:id="@+id/tvMoneyHaveToPay"
+                        style="@style/TextViewNormalBold"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_small"
+                        android:layout_weight="1"
+                        android:padding="@dimen/padding_micro"
+                        android:singleLine="true"
+                        android:textAlignment="textEnd" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/diliver_height"
+                    android:background="@color/colorDarkGray" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextViewNormal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/guest_pay"
+                        android:textColor="@color/colorBluePrimary" />
+
+                    <TextView
+                        android:id="@+id/tvMoneyGuestPay"
+                        style="@style/TextViewNormal"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_small"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector_dish"
+                        android:padding="@dimen/padding_micro"
+                        android:singleLine="true"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/colorBluePrimary"
+                        tools:ignore="Autofill,LabelFor" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextViewNormal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/money_returned_to_guest" />
+
+                    <TextView
+                        android:id="@+id/tvMoneyReturn"
+                        style="@style/TextViewNormal"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_small"
+                        android:layout_weight="1"
+                        android:padding="@dimen/padding_micro"
+                        android:singleLine="true"
+                        android:text="@string/price_default"
+                        android:textAlignment="textEnd" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_footer_bill"
+                android:paddingTop="@dimen/padding_micro" />
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnDone"
+        style="@style/TextViewTitleWhite"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/action_height"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/margin_normal"
+        android:layout_marginEnd="@dimen/margin_normal"
+        android:layout_marginBottom="@dimen/margin_normal_small"
+        android:background="@drawable/selector_button_blue"
+        android:text="@string/done" />
+</RelativeLayout>

@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:focusableInTouchMode="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/actionbar_height"
+        android:background="@color/colorBluePrimary">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="@dimen/actionbar_height"
+            android:layout_height="@dimen/actionbar_height"
+            android:background="?selectableItemBackground"
+            android:contentDescription="@string/image_description"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_back_white" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            style="@style/TextViewTitleWhite"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="@dimen/actionbar_height"
+            android:gravity="center"
+            android:singleLine="true"
+            app:layout_constraintLeft_toRightOf="@id/btnBack"
+            app:layout_constraintRight_toLeftOf="@id/tvSave"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvSave"
+            style="@style/TextViewNormalWhite"
+            android:layout_width="@dimen/actionbar_height"
+            android:layout_height="@dimen/actionbar_height"
+            android:background="?selectableItemBackground"
+            android:gravity="center"
+            android:text="@string/take"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cl_actionbar"
+        android:scrollbars="none">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/padding_small">
+
+            <TextView
+                android:id="@+id/tvDishName"
+                style="@style/TextViewNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/item_dish_height"
+                android:layout_marginStart="@dimen/margin_small"
+                android:gravity="center"
+                android:text="@string/dish_name"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/ivRequireName"
+                android:layout_width="6dp"
+                android:layout_height="6dp"
+                android:layout_marginStart="@dimen/margin_micro"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:contentDescription="@string/image_description"
+                android:scaleType="fitXY"
+                app:layout_constraintLeft_toRightOf="@id/tvDishName"
+                app:layout_constraintTop_toTopOf="@id/tvDishName"
+                app:srcCompat="@drawable/ic_require" />
+
+            <EditText
+                android:id="@+id/etDishName"
+                style="@style/TextViewNormalBlack"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="@dimen/item_dish_height"
+                android:layout_marginStart="@dimen/margin_normal"
+                android:layout_marginEnd="@dimen/img_foward_witdh"
+                android:background="@null"
+                android:ellipsize="start"
+                android:hint="@string/enter_dish_name"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:singleLine="true"
+                android:textAlignment="textEnd"
+                android:textColorHint="@color/colorTextGray"
+                app:layout_constraintLeft_toRightOf="@id/ivRequireName"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="UnusedAttribute" />
+
+            <View
+                android:id="@+id/line1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_height"
+                android:background="@color/colorGray"
+                app:layout_constraintTop_toBottomOf="@id/tvDishName" />
+
+            <TextView
+                android:id="@+id/tvPriceTitle"
+                style="@style/TextViewNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/item_dish_height"
+                android:layout_marginStart="@dimen/margin_small"
+                android:gravity="center"
+                android:text="@string/price"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/line1" />
+
+            <TextView
+                android:id="@+id/tvPrice"
+                style="@style/TextViewNormalBlack"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="@dimen/item_dish_height"
+                android:layout_marginStart="@dimen/margin_normal"
+                android:background="@drawable/selector_dish"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="@string/price_default"
+                android:textAlignment="textEnd"
+                android:textColor="@android:color/black"
+                android:textColorHint="@color/colorTextGray"
+                app:layout_constraintLeft_toRightOf="@id/tvPriceTitle"
+                app:layout_constraintRight_toLeftOf="@id/ivSelectPrice"
+                app:layout_constraintTop_toTopOf="@id/tvPriceTitle"
+                tools:ignore="Autofill,LabelFor,RtlCompat" />
+
+            <ImageView
+                android:id="@+id/ivSelectPrice"
+                android:layout_width="@dimen/img_foward_witdh"
+                android:layout_height="@dimen/item_dish_height"
+                android:contentDescription="@string/image_description"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvDishName"
+                app:srcCompat="@drawable/ic_enter" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_height"
+                android:background="@color/colorGray"
+                app:layout_constraintTop_toBottomOf="@id/tvPrice" />
+
+            <TextView
+                android:id="@+id/tvUnitTitle"
+                style="@style/TextViewNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/item_dish_height"
+                android:layout_marginStart="@dimen/margin_small"
+                android:gravity="center"
+                android:text="@string/unit"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvPrice" />
+
+            <ImageView
+                android:id="@+id/ivRequireUnit"
+                android:layout_width="@dimen/img_require_width"
+                android:layout_height="6dp"
+                android:layout_marginStart="@dimen/margin_micro"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:contentDescription="@string/image_description"
+                android:scaleType="fitXY"
+                app:layout_constraintLeft_toRightOf="@id/tvUnitTitle"
+                app:layout_constraintTop_toTopOf="@id/tvUnitTitle"
+                app:srcCompat="@drawable/ic_require" />
+
+            <TextView
+                android:id="@+id/tvUnit"
+                style="@style/TextViewNormalBlack"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="@dimen/item_dish_height"
+                android:layout_marginStart="@dimen/margin_normal"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:textAlignment="textEnd"
+                android:textColor="@android:color/black"
+                app:layout_constraintLeft_toRightOf="@id/ivRequireUnit"
+                app:layout_constraintRight_toLeftOf="@id/ivSelectPrice"
+                app:layout_constraintTop_toBottomOf="@id/tvPrice"
+                tools:ignore="RtlCompat" />
+
+            <ImageView
+                android:id="@+id/ivSelectUnit"
+                android:layout_width="40dp"
+                android:layout_height="@dimen/item_dish_height"
+                android:contentDescription="@string/image_description"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvPrice"
+                app:srcCompat="@drawable/ic_enter" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_height"
+                android:background="@color/colorGray"
+                app:layout_constraintTop_toBottomOf="@id/tvUnit" />
+
+            <TextView
+                android:id="@+id/tvColor"
+                style="@style/TextViewNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_small"
+                android:text="@string/color"
+                app:layout_constraintBottom_toBottomOf="@id/ivColor"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="@id/ivColor" />
+
+            <ImageView
+                android:id="@+id/ivColor"
+                android:layout_width="@dimen/dish_image_height"
+                android:layout_height="@dimen/dish_image_width"
+                android:layout_marginStart="@dimen/margin_large_small"
+                android:layout_marginTop="@dimen/margin_small"
+                android:background="@drawable/background_dish_icon"
+                android:contentDescription="@string/image_description"
+                android:padding="@dimen/padding_small"
+                app:layout_constraintLeft_toRightOf="@id/tvColor"
+                app:layout_constraintTop_toBottomOf="@id/tvUnit"
+                app:srcCompat="@drawable/ic_paint_palette" />
+
+
+            <TextView
+                android:id="@+id/tvIcon"
+                style="@style/TextViewNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_small"
+                android:text="@string/icon"
+                app:layout_constraintBottom_toBottomOf="@id/ivColor"
+                app:layout_constraintLeft_toRightOf="@id/ivColor"
+                app:layout_constraintTop_toTopOf="@id/ivColor" />
+
+            <ImageView
+                android:id="@+id/ivIcon"
+                android:layout_width="@dimen/dish_image_width"
+                android:layout_height="@dimen/dish_image_height"
+                android:layout_marginStart="@dimen/margin_small"
+                android:background="@drawable/background_dish_icon"
+                android:contentDescription="@string/image_description"
+                android:padding="@dimen/padding_small"
+                android:text="@string/icon"
+                app:layout_constraintBottom_toBottomOf="@id/ivColor"
+                app:layout_constraintLeft_toRightOf="@id/tvIcon"
+                app:layout_constraintTop_toTopOf="@id/ivColor"
+                app:srcCompat="@drawable/ic_default" />
+
+            <TextView
+                android:id="@+id/tvStateTitle"
+                style="@style/TextViewNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/margin_small"
+                android:text="@string/state"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="@id/cbState" />
+
+            <CheckBox
+                android:id="@+id/cbState"
+                style="@style/TextViewNormalGray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_small"
+                android:background="@android:color/transparent"
+                android:button="@drawable/cb_selector_blue"
+                android:text="@string/stop_sale"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_size_normal"
+                app:layout_constraintStart_toStartOf="@id/ivColor"
+                app:layout_constraintTop_toBottomOf="@id/ivColor" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clButtonAction"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/action_height"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/margin_small"
+        android:paddingLeft="@dimen/padding_normal"
+        android:paddingRight="@dimen/padding_normal">
+
+        <Button
+            android:id="@+id/btnDelete"
+            style="@style/TextViewTitleWhite"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="@dimen/margin_normal"
+            android:background="@drawable/selector_button_red"
+            android:text="@string/delete"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/btnSave" />
+
+        <Button
+            android:id="@+id/btnSave"
+            style="@style/TextViewTitleWhite"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="match_parent"
+            android:background="@drawable/selector_button_blue"
+            android:text="@string/take"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/btnDelete"
+            app:layout_constraintRight_toRightOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

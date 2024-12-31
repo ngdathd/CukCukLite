@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lnOrder"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/item_order_default_height"
+    android:layout_marginStart="@dimen/margin_small"
+    android:layout_marginTop="@dimen/margin_small"
+    android:layout_marginEnd="@dimen/margin_small"
+    android:background="@drawable/selector_order"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_item_order"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/padding_normal"
+        android:paddingTop="@dimen/padding_normal"
+        android:paddingRight="@dimen/padding_normal">
+
+        <RelativeLayout
+            android:id="@+id/rlColorTable"
+            android:layout_width="@dimen/size_icon_table_sale"
+            android:layout_height="@dimen/size_icon_table_sale">
+
+            <ImageView
+                android:id="@+id/ivBackground"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/image_description" />
+
+            <TextView
+                android:id="@+id/tvTable"
+                style="@style/TextViewNormalWhite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="@string/price_default"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="@dimen/size_icon_table_sale"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_normal_small"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/tvPerson"
+                style="@style/TextViewNormalBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_normal"
+                android:drawableEnd="@drawable/ic_customer"
+                android:drawablePadding="@dimen/padding_tv_image"
+                android:gravity="center" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="@dimen/diliver_height"
+        android:layout_height="match_parent"
+        android:background="@color/colorGray" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/rlContent"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/selector_dish"
+            tools:ignore="NestedWeights">
+
+            <ImageView
+                android:id="@+id/ivGotoDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_small"
+                android:contentDescription="@string/image_description"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_enter" />
+
+            <TextView
+                android:id="@+id/tvContent"
+                style="@style/TextViewNormal"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="@dimen/margin_normal"
+                android:layout_toStartOf="@+id/ivGotoDetail"
+                android:ellipsize="end"
+                android:lineSpacingMultiplier="1.2"
+                android:maxLines="2"
+                app:layout_constraintBottom_toTopOf="@id/tvTotalMoney"
+                app:layout_constraintEnd_toStartOf="@id/ivGotoDetail"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <TextView
+                android:id="@+id/tvTotalMoney"
+                style="@style/TextViewNormal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvContent"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="@dimen/margin_normal"
+                android:textColor="@color/colorTextGray"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/tvContent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvContent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/diliver_height"
+            android:background="@color/colorGray" />
+
+        <LinearLayout
+            android:id="@+id/lnButton"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/action_height"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/lnCancel"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:background="@drawable/selector_button_gray"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/margin_normal_small"
+                android:paddingBottom="@dimen/margin_normal_small">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/image_description"
+                    app:srcCompat="@drawable/ic_close_red_28dp" />
+
+                <TextView
+                    style="@style/TextViewNormal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:text="@string/cancel_short" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="@dimen/diliver_height"
+                android:layout_height="match_parent"
+                android:background="@color/colorGray" />
+
+            <LinearLayout
+                android:id="@+id/lnPay"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:background="@drawable/selector_button_gray"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/margin_normal_small"
+                android:paddingBottom="@dimen/margin_normal_small">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/image_description"
+                    android:src="@drawable/ic_dollar_orange" />
+
+                <TextView
+                    style="@style/TextViewNormal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:text="@string/pay" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/color_fragment_container"
+    android:layout_width="@dimen/color_dialog_width"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        style="@style/TextViewTitleWhite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBluePrimary"
+        android:padding="@dimen/padding_small"
+        android:text="@string/price"
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/btnClose"
+        android:layout_width="@dimen/close_button_width"
+        android:layout_height="@dimen/close_button_height"
+        android:layout_marginEnd="@dimen/margin_small"
+        android:contentDescription="@string/image_description"
+        app:layout_constraintBottom_toBottomOf="@id/tvTitle"
+        app:layout_constraintRight_toRightOf="@id/tvTitle"
+        app:layout_constraintTop_toTopOf="@id/tvTitle"
+        app:srcCompat="@drawable/ic_close_white" />
+
+    <EditText
+        android:id="@+id/etPrice"
+        style="@style/TextViewNormalBlack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_normal"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:layout_marginRight="@dimen/margin_normal"
+        android:background="@drawable/background_et_price"
+        android:inputType="number"
+        android:padding="@dimen/padding_normal"
+        android:textAlignment="textEnd"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        tools:ignore="Autofill,LabelFor" />
+
+    <Button
+        android:id="@+id/btnClearAll"
+        style="@style/ButtonCalculator"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/select_button_height"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:layout_marginEnd="@dimen/margin_small"
+        android:text="@string/c"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintLeft_toLeftOf="@id/etPrice"
+        app:layout_constraintRight_toLeftOf="@id/btnDecrease"
+        app:layout_constraintTop_toBottomOf="@id/etPrice" />
+
+    <Button
+        android:id="@+id/btnDecrease"
+        style="@style/ButtonCalculator"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/select_button_height"
+        android:layout_marginEnd="@dimen/margin_small"
+        android:text="@string/decrease"
+        app:layout_constraintLeft_toRightOf="@id/btnClearAll"
+        app:layout_constraintRight_toLeftOf="@id/btnIncrease"
+        app:layout_constraintTop_toTopOf="@id/btnClearAll" />
+
+    <Button
+        android:id="@+id/btnIncrease"
+        style="@style/ButtonCalculator"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/select_button_height"
+        android:layout_marginEnd="@dimen/margin_small"
+        android:text="@string/increase"
+        app:layout_constraintLeft_toRightOf="@id/btnDecrease"
+        app:layout_constraintRight_toLeftOf="@id/btnClear"
+        app:layout_constraintTop_toTopOf="@id/btnClearAll" />
+
+    <ImageButton
+        android:id="@+id/btnClear"
+        style="@style/ButtonCalculator"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/select_button_height"
+        android:contentDescription="@string/image_description"
+        app:layout_constraintLeft_toRightOf="@id/btnIncrease"
+        app:layout_constraintRight_toRightOf="@id/etPrice"
+        app:layout_constraintTop_toTopOf="@id/btnClearAll"
+        app:srcCompat="@drawable/ic_delete_text" />
+
+    <Button
+        android:id="@+id/btnSeven"
+        style="@style/ButtonCalculator"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/select_button_height"
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_marginEnd="@dimen/margin_small"
+        android:text="@string/_7"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintLeft_toLeftOf="@id/etPrice"
+        app:layout_constraintRight_toLeftOf="@id/btnEight"
+        app:layout_constraintTop_toBottomOf="@id/btnClearAll" />
+
+    <Button
+        android:id="@+id/btnEight"
+        style="@style/ButtonCalculator"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/select_button_height"
+        android:layout_marginEnd="@dimen/margin_small"
+        android:text="@string/_8"
+        app:layout_constraintLeft_toRightOf="@id/btnSeven"
+        app:layout_constraintRight_toLeftOf="@id/btnNine"
+        app:layout_constraintTop_toTopOf="@id/btnSeven" />
+
+    <Button
+        android:id="@+id/btnNine"
+        style="@style/ButtonCalculator"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/select_button_height"
+        android:layout_marginEnd="@dimen/margin_small"
+        android:text="@string/_9"
+        app:layout_constraintLeft_toRightOf="@id/btnEight"
+        app:layout_constraintRight_toLeftOf="@id/btnSubtraction"
+        app:layout_constraintTop_toTopOf="@id/btnSeven" />
+
+    <Button
+        android:id="@+id/btnSubtraction"
+        style="@style/ButtonCalculator"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/select_button_height"
+        android:text="@string/_Sub"
+        app:layout_constraintLeft_toRightOf="@id/btnNine"
+        app:layout_constraintRight_toRightOf="@id/etPrice"
+        app:layout_constraintTop_toTopOf="@id/btnSeven" />
+
+    <Button
+        android:id="@+id/btnFour"
+        style="@style/ButtonCalculator"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/select_button_height"
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_marginEnd="@dimen/margin_small"
+        android:text="@string/_4"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintLeft_toLeftOf="@id/etPrice"
+        app:layout_constraintRight_toLeftOf="@id/btnFive"
+        app:layout_constraintTop_toBottomOf="@id/btnSeven" />
+
+    <Button
+        android:id="@+id/btnFive"
+        style="@style/ButtonCalculator"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/select_button_height"
+        android:layout_marginEnd="@dimen/margin_small"
+        android:text="@string/_5"
+        app:layout_constraintLeft_toRightOf="@id/btnFour"
+        app:layout_constraintRight_toLeftOf="@id/btnSix"
+        app:layout_constraintTop_toTopOf="@id/btnFour" />
+
+    <Button
+        android:id="@+id/btnSix"
+        style="@style/ButtonCalculator"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/select_button_height"
+        android:layout_marginEnd="@dimen/margin_small"
+        android:text="@string/_6"
+        app:layout_constraintLeft_toRightOf="@id/btnFive"
+        app:layout_constraintRight_toLeftOf="@id/btnSummation"
+        app:layout_constraintTop_toTopOf="@id/btnFour" />
+
+    <Button
+        android:id="@+id/btnSummation"
+        style="@style/ButtonCalculator"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/select_button_height"
+        android:text="@string/_Sum"
+        app:layout_constraintLeft_toRightOf="@id/btnSix"
+        app:layout_constraintRight_toRightOf="@id/etPrice"
+        app:layout_constraintTop_toTopOf="@id/btnFour" />
+
+    <Button
+        android:id="@+id/btnOne"
+        style="@style/ButtonCalculator"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/select_button_height"
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_marginEnd="@dimen/margin_small"
+        android:text="@string/_1"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintLeft_toLeftOf="@id/etPrice"
+        app:layout_constraintRight_toLeftOf="@id/btnTwo"
+        app:layout_constraintTop_toBottomOf="@id/btnFour" />
+
+    <Button
+        android:id="@+id/btnTwo"
+        style="@style/ButtonCalculator"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/select_button_height"
+        android:layout_marginEnd="@dimen/margin_small"
+        android:text="@string/_2"
+        app:layout_constraintLeft_toRightOf="@id/btnOne"
+        app:layout_constraintRight_toLeftOf="@id/btnThree"
+        app:layout_constraintTop_toTopOf="@id/btnOne" />
+
+    <Button
+        android:id="@+id/btnThree"
+        style="@style/ButtonCalculator"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/select_button_height"
+        android:layout_marginEnd="@dimen/margin_small"
+        android:text="@string/_3"
+        app:layout_constraintLeft_toRightOf="@id/btnTwo"
+        app:layout_constraintRight_toLeftOf="@id/btnSumSub"
+        app:layout_constraintTop_toTopOf="@id/btnOne" />
+
+    <Button
+        android:id="@+id/btnSumSub"
+        style="@style/ButtonCalculator"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/select_button_height"
+        android:text="@string/sum_sub"
+        app:layout_constraintLeft_toRightOf="@id/btnThree"
+        app:layout_constraintRight_toRightOf="@id/etPrice"
+        app:layout_constraintTop_toTopOf="@id/btnOne" />
+
+    <Button
+        android:id="@+id/btnZero"
+        style="@style/ButtonCalculator"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/select_button_height"
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_marginEnd="@dimen/margin_small"
+        android:layout_marginBottom="@dimen/margin_normal"
+        android:text="@string/_0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintLeft_toLeftOf="@id/etPrice"
+        app:layout_constraintRight_toLeftOf="@id/btnThousand"
+        app:layout_constraintTop_toBottomOf="@id/btnOne" />
+
+    <Button
+        android:id="@+id/btnThousand"
+        style="@style/ButtonCalculator"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/select_button_height"
+        android:layout_marginEnd="@dimen/margin_small"
+        android:text="@string/thousand"
+        app:layout_constraintLeft_toRightOf="@id/btnZero"
+        app:layout_constraintRight_toLeftOf="@id/btnComma"
+        app:layout_constraintTop_toTopOf="@id/btnZero" />
+
+    <Button
+        android:id="@+id/btnComma"
+        style="@style/ButtonCalculator"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/select_button_height"
+        android:layout_marginEnd="@dimen/margin_small"
+        android:text="@string/comma"
+        app:layout_constraintLeft_toRightOf="@id/btnThousand"
+        app:layout_constraintRight_toLeftOf="@id/btnEqualDone"
+        app:layout_constraintTop_toTopOf="@id/btnZero" />
+
+    <Button
+        android:id="@+id/btnEqualDone"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/select_button_height"
+        android:background="@drawable/selector_button_blue"
+        android:text="@string/equal_done"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_size_normal"
+        app:layout_constraintLeft_toRightOf="@id/btnComma"
+        app:layout_constraintRight_toRightOf="@id/etPrice"
+        app:layout_constraintTop_toTopOf="@id/btnZero" />
+</androidx.constraintlayout.widget.ConstraintLayout>
