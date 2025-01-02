@@ -63,12 +63,13 @@ public class EmailRegisterServices extends BaseFireBase {
                             }
                         }
                     }
-                }).addOnFailureListener(new OnFailureListener() {
-            @Override
-            public void onFailure(@NonNull Exception e) {
-                listener.registerFailure(e.getMessage());
-            }
-        });
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        listener.registerFailure(e.getMessage());
+                    }
+                });
     }
 
     public void createAccountInDatabase(final User user, final EmailRegisterListener listener) {
@@ -80,11 +81,12 @@ public class EmailRegisterServices extends BaseFireBase {
                     public void onSuccess(Void aVoid) {
                         listener.registerSuccess();
                     }
-                }).addOnFailureListener(new OnFailureListener() {
-            @Override
-            public void onFailure(@NonNull Exception e) {
-                listener.registerFailure(e.getMessage());
-            }
-        });
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        listener.registerFailure(e.getMessage());
+                    }
+                });
     }
 }

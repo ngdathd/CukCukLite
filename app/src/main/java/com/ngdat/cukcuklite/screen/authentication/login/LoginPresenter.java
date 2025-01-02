@@ -147,7 +147,7 @@ public class LoginPresenter implements ILoginContract.IPresenter {
             });
             insertAllDataToDBLocal();
         } catch (Exception e) {
-
+            e.printStackTrace();
         }
     }
 

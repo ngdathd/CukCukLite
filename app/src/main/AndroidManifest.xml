@@ -35,16 +35,10 @@
             android:name=".screen.introduction.IntroductionActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".screen.loginoption.LoginOptionActivity"
-            android:screenOrientation="portrait" />
-        <activity
             android:name=".screen.authentication.login.LoginActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".screen.authentication.register.RegisterActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".screen.loginemail.LoginEmailActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".screen.chooserestauranttype.ChooseRestaurantTypeActivity"

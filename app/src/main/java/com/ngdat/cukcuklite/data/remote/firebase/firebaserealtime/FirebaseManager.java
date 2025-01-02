@@ -21,7 +21,6 @@ import com.ngdat.cukcuklite.data.models.Bill;
 import com.ngdat.cukcuklite.data.models.BillDetail;
 import com.ngdat.cukcuklite.data.models.Dish;
 import com.ngdat.cukcuklite.data.models.Unit;
-import com.ngdat.cukcuklite.data.remote.firebase.firestore.FireStoreManager;
 import com.ngdat.cukcuklite.utils.AppConstants;
 
 public class FirebaseManager {
@@ -44,11 +43,7 @@ public class FirebaseManager {
 
     public static FirebaseManager getInstance() {
         if (sInstance == null) {
-            synchronized (FireStoreManager.class) {
-                if (sInstance == null) {
-                    sInstance = new FirebaseManager();
-                }
-            }
+            sInstance = new FirebaseManager();
         }
         return sInstance;
     }

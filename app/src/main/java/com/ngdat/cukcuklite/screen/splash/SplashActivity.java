@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.ngdat.cukcuklite.R;
 import com.ngdat.cukcuklite.data.local.prefs.SharedPrefersManager;
+import com.ngdat.cukcuklite.screen.authentication.login.LoginActivity;
 import com.ngdat.cukcuklite.screen.chooserestauranttype.ChooseRestaurantTypeActivity;
 import com.ngdat.cukcuklite.screen.dishorder.DishOrderActivity;
 import com.ngdat.cukcuklite.screen.introduction.IntroductionActivity;
@@ -47,37 +48,37 @@ public class SplashActivity extends AppCompatActivity implements ISplashContract
             new Handler().postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    //kiểm tra user chưa đăng nhập và chưa chọn loại nhà hàng(chưa có dữ liệu gì cả)
-                    //thì hiển thị màn hình giới thiệu
-                    if (!isLoginBefore && !isAlreadyHasData) {
-                        mNavigator.startActivity(IntroductionActivity.class, Navigator.ActivityTransition.NONE);
-                        finish();
-                    }
-                    //kiểm tra user chưa đăng nhập và và đã chọn loại nhà hàng
-                    //thì hiển thị màn hình chính của ứng dụng
-                    if (!isLoginBefore && isAlreadyHasData) {
-                        Intent intent = new Intent();
-                        intent.setClass(getApplicationContext(), DishOrderActivity.class);
-                        mNavigator.startActivity(intent, Navigator.ActivityTransition.NONE);
-                        finish();
-                    }
-
-                    //kiểm tra user đã đăng nhập và chưa chọn loại nhà hàng(chưa có dữ liệu gì cả)
-                    //thì hiển thị màn hình chọn loại nhà hàng
-                    if (isLoginBefore && !isAlreadyHasData) {
-                        Intent intent = new Intent();
-                        intent.setClass(getApplicationContext(), ChooseRestaurantTypeActivity.class);
-                        intent.putExtra(AppConstants.EXTRA_LOGIN_SUCCESS, true);
-                        mNavigator.startActivity(intent, Navigator.ActivityTransition.NONE);
-                        finish();
-                    }
-                    //kiểm tra user đã đăng nhập và đã chọn loại nhà hàng
-                    //hiển thị màn hình chính của ứng dụng
-                    if (isLoginBefore && isAlreadyHasData) {
-                        Intent intent = new Intent();
-                        intent.setClass(getApplicationContext(), DishOrderActivity.class);
-                        mNavigator.startActivity(intent, Navigator.ActivityTransition.NONE);
-                        finish();
+                    if (isLoginBefore) {
+                        if (isAlreadyHasData) {
+                            //kiểm tra user đã đăng nhập và đã chọn loại nhà hàng
+                            //hiển thị màn hình chính của ứng dụng
+                            Intent intent = new Intent();
+                            intent.setClass(getApplicationContext(), DishOrderActivity.class);
+                            mNavigator.startActivity(intent, Navigator.ActivityTransition.NONE);
+                            finish();
+                        } else {
+                            //kiểm tra user đã đăng nhập và chưa chọn loại nhà hàng(chưa có dữ liệu gì cả)
+                            //thì hiển thị màn hình chọn loại nhà hàng
+                            Intent intent = new Intent();
+                            intent.setClass(getApplicationContext(), ChooseRestaurantTypeActivity.class);
+                            intent.putExtra(AppConstants.EXTRA_LOGIN_SUCCESS, true);
+                            mNavigator.startActivity(intent, Navigator.ActivityTransition.NONE);
+                            finish();
+                        }
+                    } else {
+                        if (isAlreadyHasData) {
+                            //kiểm tra user đã đăng nhập và đã chọn loại nhà hàng
+                            //hiển thị đăng nhập
+                            Intent intent = new Intent();
+                            intent.setClass(getApplicationContext(), LoginActivity.class);
+                            mNavigator.startActivity(intent, Navigator.ActivityTransition.NONE);
+                            finish();
+                        } else {
+                            //kiểm tra user chưa đăng nhập và chưa chọn loại nhà hàng(chưa có dữ liệu gì cả)
+                            //thì hiển thị màn hình giới thiệu
+                            mNavigator.startActivity(IntroductionActivity.class, Navigator.ActivityTransition.NONE);
+                            finish();
+                        }
                     }
                 }
             }, 1500);
