@@ -4,6 +4,9 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.content.res.Resources;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.util.Base64;
@@ -27,6 +30,29 @@ import java.util.regex.Pattern;
  * Created at 02/04/2019
  */
 public final class CommonsUtils {
+    public static int WIDTH_SCREEN = Resources.getSystem().getDisplayMetrics().widthPixels;
+    public static int HEIGHT_SCREEN = Resources.getSystem().getDisplayMetrics().heightPixels;
+
+    public static Bitmap getLargeBitmap(Resources resources, int idImg) {
+        BitmapFactory.Options options = new BitmapFactory.Options();
+        options.inJustDecodeBounds = true;
+        BitmapFactory.decodeResource(resources, idImg, options);
+
+        int scale = 2;
+        int widthImg = options.outWidth;
+        int heightImg = options.outHeight;
+
+        if (WIDTH_SCREEN >= widthImg && HEIGHT_SCREEN >= heightImg) {
+            options.inSampleSize = 1;
+        } else {
+            while ((widthImg / scale) >= WIDTH_SCREEN && (heightImg / scale) >= HEIGHT_SCREEN) {
+                scale += 2;
+            }
+            options.inSampleSize = scale;
+        }
+        options.inJustDecodeBounds = false;
+        return BitmapFactory.decodeResource(resources, idImg, options);
+    }
 
     public static boolean isNotEmpty(EditText editText) {
         if (0 < editText.getText().toString().trim().length()) {

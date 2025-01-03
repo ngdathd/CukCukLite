@@ -9,8 +9,7 @@
         android:id="@+id/img_bg"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:scaleType="fitXY"
-        android:src="@drawable/sign_up_flow_1"/>
+        android:scaleType="fitXY" />
 
     <LinearLayout
         android:id="@+id/ln_logo"
@@ -40,12 +39,12 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/tvIntroFirst"
-        style="@style/TextViewIntro"
+        android:id="@+id/txt_hello"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingHorizontal="@dimen/margin_large"
-        android:text="@string/intro_msg_1"
         android:layout_centerInParent="true"
-        android:textSize="@dimen/text_size_title"/>
+        android:text="Chào bạn..."
+        android:textColor="@color/white"
+        android:textSize="32sp"
+        android:textStyle="italic|bold" />
 </RelativeLayout>

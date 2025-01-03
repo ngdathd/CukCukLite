@@ -370,7 +370,6 @@ public class DishDataSource implements IDishDataSource, IDBUtils.ITableDishUtils
 
     /**
      * Lấy tất cả danh sách id của món ăn
-     * Created_by Nguyễn Bá Li
      *
      *
      *

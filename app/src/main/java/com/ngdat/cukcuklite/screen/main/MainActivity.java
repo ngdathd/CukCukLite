@@ -22,11 +22,11 @@ import com.google.android.material.navigation.NavigationView;
 import com.ngdat.cukcuklite.R;
 import com.ngdat.cukcuklite.data.local.prefs.SharedPrefersManager;
 import com.ngdat.cukcuklite.screen.adddish.AddDishActivity;
-import com.ngdat.cukcuklite.screen.authentication.login.LoginActivity;
 import com.ngdat.cukcuklite.screen.dishorder.DishOrderActivity;
 import com.ngdat.cukcuklite.screen.menu.MenuFragment;
 import com.ngdat.cukcuklite.screen.report.ReportFragment;
 import com.ngdat.cukcuklite.screen.sale.SaleFragment;
+import com.ngdat.cukcuklite.screen.start.StartAppActivity;
 import com.ngdat.cukcuklite.utils.Navigator;
 
 /**
@@ -157,43 +157,14 @@ public class MainActivity extends AppCompatActivity implements IMainContract.IVi
                 break;
             case R.id.navReport:
                 try {
-                    if (SharedPrefersManager.getInstance(this).getIsLoginSuccess()) {
-                        btnAdd.setClickable(false);
-                        btnAdd.setVisibility(View.INVISIBLE);
-                        tvTitle.setText(R.string.evenue);
-                        mNavigator.addFragment(R.id.flMainContainer, ReportFragment.newInstance(),
-                                false, Navigator.NavigateAnim.NONE, "REPORT_TAG");
-                    } else {
-                        mNavigator.startActivity(LoginActivity.class);
-                    }
+                    btnAdd.setClickable(false);
+                    btnAdd.setVisibility(View.INVISIBLE);
+                    tvTitle.setText(R.string.evenue);
+                    mNavigator.addFragment(R.id.flMainContainer, ReportFragment.newInstance(),
+                            false, Navigator.NavigateAnim.NONE, ReportFragment.class.getSimpleName());
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
-                break;
-
-            case R.id.navShare:
-                try {
-                    ShareCompat.IntentBuilder.from(this)
-                            .setType("text/plain")
-                            .setChooserTitle(getString(R.string.share_app))
-                            .setText("market://details?id=vn.com.misa.android_cukcuklite")
-                            .startChooser();
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-                break;
-            case R.id.navRate:
-                try {
-                    Uri myUri = Uri.parse("market://details?id=vn.com.misa.android_cukcuklite");
-                    Intent intent = new Intent(Intent.ACTION_VIEW);
-                    intent.setData(myUri);
-                    startActivity(intent);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-                break;
-            case R.id.navInfo:
-
                 break;
             case R.id.navLogout:
                 try {
@@ -220,7 +191,7 @@ public class MainActivity extends AppCompatActivity implements IMainContract.IVi
     @Override
     public void goToLoginScreen() {
         try {
-            startActivity(new Intent(MainActivity.this, LoginActivity.class));
+            startActivity(new Intent(MainActivity.this, StartAppActivity.class));
             finish();
         } catch (Exception e) {
             e.printStackTrace();

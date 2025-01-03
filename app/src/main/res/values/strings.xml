@@ -81,6 +81,7 @@
     <string name="passconfirm_error">Mật khẩu không khớp!</string>
     <string name="skip">Bỏ qua</string>
     <string name="next">Tiếp theo</string>
+    <string name="backtologin">Quay Lại</string>
     <string name="login">Đăng nhập</string>
     <string name="forget_pass">Quên Mật Khẩu?</string>
     <string name="you_have_account">Bạn đã có tài khoản?</string>
@@ -91,7 +92,7 @@
     <string name="input_pass">Nhập Mật Khẩu</string>
     <string name="input_pass1">Nhập Lại Mật Khẩu</string>
     <string name="note_register">Vui lòng đăng ký với email mà bạn sử dụng để xác nhận và tránh các sự cố về tài khoản!</string>
-    <string name="intro_msg_1">Ứng dụng &lt;font color=#0973b9>MIỄN PHÍ&lt;/font> để bán hàng và thống kê doanh thu dành cho các quán nhỏ và quầy di động phục vụ ăn uống.</string>
+    <string name="intro_msg_1">Ứng dụng để bán hàng và thống kê doanh thu dành cho các quán nhỏ và quầy di động phục vụ ăn uống.</string>
     <string name="intro_msg_2">Chọn loại quán để lấy thực đơn có sẵn hoặc tự thêm món dễ dàng.</string>
     <string name="intro_msg_3">Ghi lại nhanh các món khách đã gọi.</string>
     <string name="intro_msg_4">Thu tiền và trả tiền thừa cho khách đơn giản, chính xác.</string>

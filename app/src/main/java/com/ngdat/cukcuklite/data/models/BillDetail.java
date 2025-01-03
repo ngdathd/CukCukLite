@@ -18,6 +18,10 @@ public class BillDetail {
 
     private String Name;
 
+    public BillDetail () {
+
+    }
+
     public BillDetail(Builder builder) {
         BillDetailId = builder.BillDetailId;
         BillId = builder.BillId;

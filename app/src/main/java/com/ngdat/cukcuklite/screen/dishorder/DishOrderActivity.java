@@ -26,11 +26,11 @@ import com.ngdat.cukcuklite.base.listeners.IOnItemClickListener;
 import com.ngdat.cukcuklite.data.models.Bill;
 import com.ngdat.cukcuklite.data.models.BillDetail;
 import com.ngdat.cukcuklite.data.local.prefs.SharedPrefersManager;
-import com.ngdat.cukcuklite.screen.authentication.login.LoginActivity;
 import com.ngdat.cukcuklite.screen.dialogs.caculator.InputNumberDialog;
 import com.ngdat.cukcuklite.screen.main.MainActivity;
 import com.ngdat.cukcuklite.screen.pay.PayActivity;
 import com.ngdat.cukcuklite.screen.sale.SaleFragment;
+import com.ngdat.cukcuklite.screen.start.StartAppActivity;
 import com.ngdat.cukcuklite.utils.AppConstants;
 import com.ngdat.cukcuklite.utils.Navigator;
 
@@ -360,7 +360,7 @@ public class DishOrderActivity extends AppCompatActivity implements DishOrderCon
                     } else {
                         long totalMoney = (long) NumberFormat.getNumberInstance(Locale.US).parse(tvTotalMoney.getText().toString());
                         if (totalMoney > 0) {
-                            mNavigator.startActivity(LoginActivity.class);
+                            mNavigator.startActivity(StartAppActivity.class);
                         } else {
                             mNavigator.showToastOnTopScreen(R.string.you_have_not_select_dish_yet);
                         }

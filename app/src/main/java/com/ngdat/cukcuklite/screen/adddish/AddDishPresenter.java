@@ -6,8 +6,8 @@ import com.ngdat.cukcuklite.data.local.dish.DishDataSource;
 import com.ngdat.cukcuklite.data.local.unit.UnitDataSource;
 import com.ngdat.cukcuklite.data.models.Dish;
 import com.ngdat.cukcuklite.data.models.Unit;
-import com.ngdat.cukcuklite.data.remote.firebase.firebaserealtime.FirebaseManager;
-import com.ngdat.cukcuklite.data.remote.firebase.firebaserealtime.IFirebaseRealTime;
+import com.ngdat.cukcuklite.data.service.FirebaseManager;
+import com.ngdat.cukcuklite.data.service.IFirebaseRealTime;
 import com.ngdat.cukcuklite.utils.CommonsUtils;
 
 /**

@@ -23,6 +23,9 @@ public class Unit implements Parcelable {
     private String UnitId;
     private String UnitName;
 
+    public Unit() {
+
+    }
 
     public Unit(String unitId, String unitName) {
         UnitId = unitId;

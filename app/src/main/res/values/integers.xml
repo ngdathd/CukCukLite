@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <integer name="default_transaction_animation_duration">250</integer>
+    <integer name="duration_screen">300</integer>
     <integer name="weight_layout_bottom_add_oder">8</integer>
     <integer name="weight_button_voice">1</integer>
     <integer name="weight_button_save">3</integer>

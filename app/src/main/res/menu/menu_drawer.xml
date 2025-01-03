@@ -17,42 +17,6 @@
             android:title="@string/report_menu_action" />
     </group>
 
-    <item android:title="@string/submenu_title_settings">
-        <menu>
-            <item
-                android:id="@+id/navSync"
-                android:icon="@drawable/ic_sync"
-                android:title="@string/nav_sync_title" />
-            <item
-                android:id="@+id/navSettings"
-                android:icon="@drawable/ic_settings_gray"
-                android:title="@string/nav_settting_title" />
-        </menu>
-    </item>
-
-    <item android:title="@string/submenu_title_help">
-        <menu>
-            <item
-                android:id="@+id/navNotification"
-                android:icon="@drawable/ic_notifications_gray_24dp"
-                android:title="@string/nav_notification_title" />
-
-            <item
-                android:id="@+id/navShare"
-                android:icon="@drawable/ic_share"
-                android:title="@string/nav_share_title" />
-
-            <item
-                android:id="@+id/navRate"
-                android:icon="@drawable/ic_rate"
-                android:title="@string/nav_rate_title" />
-
-            <item
-                android:id="@+id/navInfo"
-                android:icon="@drawable/ic_info_gray_24dp"
-                android:title="@string/nav_info_title" />
-        </menu>
-    </item>
     <item android:title="@string/submenu_title_account">
         <menu>
             <item

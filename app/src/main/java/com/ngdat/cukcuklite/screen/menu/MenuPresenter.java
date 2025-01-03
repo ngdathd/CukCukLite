@@ -43,7 +43,7 @@ public class MenuPresenter implements IMenuContract.IPresenter {
         try {
             mView.showLoading();
             final List<Dish> dishes = mDishDataSource.getAllDish();
-            if (dishes != null && dishes.size() > 2) {
+            if (dishes != null) {
                 Collections.sort(dishes, new Comparator<Dish>() {
                     @Override
                     public int compare(Dish o1, Dish o2) {

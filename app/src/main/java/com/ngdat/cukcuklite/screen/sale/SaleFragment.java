@@ -23,11 +23,11 @@ import com.ngdat.cukcuklite.R;
 import com.ngdat.cukcuklite.data.local.database.IDBUtils;
 import com.ngdat.cukcuklite.data.models.Order;
 import com.ngdat.cukcuklite.data.local.prefs.SharedPrefersManager;
-import com.ngdat.cukcuklite.screen.authentication.login.LoginActivity;
 import com.ngdat.cukcuklite.screen.dialogs.delete.ConfirmDeleteDialog;
 import com.ngdat.cukcuklite.screen.dishorder.DishOrderActivity;
 import com.ngdat.cukcuklite.screen.main.MainActivity;
 import com.ngdat.cukcuklite.screen.pay.PayActivity;
+import com.ngdat.cukcuklite.screen.start.StartAppActivity;
 import com.ngdat.cukcuklite.utils.AppConstants;
 import com.ngdat.cukcuklite.utils.Navigator;
 
@@ -248,7 +248,7 @@ public class SaleFragment extends Fragment implements ISaleContract.IView, Order
                 intent.putExtra(AppConstants.EXTRA_BILL_ID, billId);
                 mNavigator.startActivityForResult(intent, REQUEST_PAY);
             } else {
-                mNavigator.startActivity(LoginActivity.class, Navigator.ActivityTransition.NONE);
+                mNavigator.startActivity(StartAppActivity.class, Navigator.ActivityTransition.NONE);
             }
         } catch (Exception e) {
             e.printStackTrace();

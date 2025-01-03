@@ -1,97 +1,73 @@
 package com.ngdat.cukcuklite.data.models;
 
-public class User {
-    private String UserId;
-    private String Name;
-    private String Password;
-    private String Email;
-    private String AvatarUrl;
+import java.io.Serializable;
+import java.util.HashMap;
+
+public class User implements Serializable {
+    private String userId;
+    private String name;
+    private String email;
+    private HashMap<String, Unit> units;
+    private HashMap<String, Dish> dishes;
+    private HashMap<String, Bill> bills;
+    private HashMap<String, BillDetail> billDetails;
 
     public User() {
     }
 
-    public User(Builder builder) {
-        UserId = builder.UserId;
-        Name = builder.Name;
-        Password = builder.Password;
-        Email = builder.Email;
-        AvatarUrl = builder.AvatarUrl;
-    }
-
     public String getUserId() {
-        return UserId;
+        return userId;
     }
 
     public void setUserId(String userId) {
-        UserId = userId;
+        this.userId = userId;
     }
 
     public String getName() {
-        return Name;
+        return name;
     }
 
     public void setName(String name) {
-        Name = name;
-    }
-
-    public String getPassword() {
-        return Password;
-    }
-
-    public void setPassword(String password) {
-        Password = password;
+        this.name = name;
     }
 
     public String getEmail() {
-        return Email;
+        return email;
     }
 
     public void setEmail(String email) {
-        Email = email;
+        this.email = email;
     }
 
-    public String getAvatarUrl() {
-        return AvatarUrl;
+    public HashMap<String, Unit> getUnits() {
+        return units;
     }
 
-    public void setAvatarUrl(String avatarUrl) {
-        AvatarUrl = avatarUrl;
+    public void setUnits(HashMap<String, Unit> units) {
+        this.units = units;
     }
 
-    public static class Builder {
-        private String UserId;
-        private String Name;
-        private String Password;
-        private String Email;
-        private String AvatarUrl;
+    public HashMap<String, Dish> getDishes() {
+        return dishes;
+    }
 
-        public Builder setUserId(String userId) {
-            UserId = userId;
-            return this;
-        }
+    public void setDishes(HashMap<String, Dish> dishes) {
+        this.dishes = dishes;
+    }
 
-        public Builder setName(String name) {
-            Name = name;
-            return this;
-        }
+    public HashMap<String, Bill> getBills() {
+        return bills;
+    }
 
-        public Builder setPassword(String password) {
-            Password = password;
-            return this;
-        }
+    public void setBills(HashMap<String, Bill> bills) {
+        this.bills = bills;
+    }
 
-        public Builder setEmail(String email) {
-            Email = email;
-            return this;
-        }
+    public HashMap<String, BillDetail> getBillDetails() {
+        return billDetails;
+    }
 
-        public Builder setAvatarUrl(String avatarUrl) {
-            AvatarUrl = avatarUrl;
-            return this;
-        }
-
-        public User build() {
-            return new User(this);
-        }
+    public void setBillDetails(HashMap<String, BillDetail> billDetails) {
+        this.billDetails = billDetails;
     }
 }

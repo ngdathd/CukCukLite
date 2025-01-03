@@ -1,5 +1,6 @@
 [versions]
 agp = "8.7.3"
+appintro = "6.3.1"
 calligraphy = "2.3.0"
 eventbus = "3.3.1"
 glide = "4.16.0"
@@ -14,6 +15,7 @@ facebookAndroidSdk = "latest.release"
 firebaseBom = "33.7.0"
 
 [libraries]
+appintro = { module = "com.github.AppIntro:AppIntro", version.ref = "appintro" }
 calligraphy = { module = "uk.co.chrisjenx:calligraphy", version.ref = "calligraphy" }
 eventbus = { module = "org.greenrobot:eventbus", version.ref = "eventbus" }
 firebase-firestore = { module = "com.google.firebase:firebase-firestore" }

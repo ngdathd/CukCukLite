@@ -33,7 +33,6 @@ public class ChooseRestaurantTypeActivity extends AppCompatActivity implements I
     private static final String TAG = "ChooseRestaurantTypeAct";
     private ImageButton btnBack;
     private TextView tvContinue;
-    private boolean mIsLoginBefore;
     private ChooseRestaurantTypePresenter mPresenter;
     private Button btnContinue;
     private RecyclerView rvRestaurantType;
@@ -83,11 +82,6 @@ public class ChooseRestaurantTypeActivity extends AppCompatActivity implements I
             tvContinue = (TextView) findViewById(R.id.tvContinue);
             btnContinue = (Button) findViewById(R.id.btnContinue);
             rvRestaurantType = (RecyclerView) findViewById(R.id.rvRestaurantType);
-            Intent intent = getIntent();
-            mIsLoginBefore = intent.getBooleanExtra(AppConstants.EXTRA_LOGIN_SUCCESS, false);
-            if (mIsLoginBefore) {
-                btnBack.setVisibility(View.GONE);
-            }
 
             rvRestaurantType.setLayoutManager(new LinearLayoutManager(this));
             mRestaurantTypeAdapter = new RestaurantTypeAdapter(this);

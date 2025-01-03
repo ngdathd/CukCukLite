@@ -262,7 +262,7 @@ public class SelectUnitActivity extends AppCompatActivity implements IUnitContra
      * Phương thức lựa chọn đơn vị và trở về màn hình thêm món ăn
      * Created at 27/03/2019
      */
-    private void    setUnit(String unitId) {
+    private void setUnit(String unitId) {
         try {
             Intent intent = new Intent(ACTION_UNIT_SELECTED);
             intent.putExtra(EXTRA_UNIT_SELECTED, unitId);

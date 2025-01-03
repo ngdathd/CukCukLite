@@ -1,7 +1,9 @@
 package com.ngdat.cukcuklite.screen.main;
 
 import android.content.Context;
+import android.content.Intent;
 
+import com.facebook.login.LoginManager;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class MainPresenter implements IMainContract.IPresenter {
@@ -20,6 +22,7 @@ public class MainPresenter implements IMainContract.IPresenter {
     @Override
     public void clearData() {
         try {
+            LoginManager.getInstance().logOut();
             FirebaseAuth.getInstance().signOut();
 //            SharedPrefersManager.getInstance(mContext).setIsLoginSuccess(false);
 //            SharedPrefersManager.getInstance(mContext).setAlreadyHasData(false);
