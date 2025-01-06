@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nunito_bold">fonts/nunito.bold.ttf</string>
+    <string name="nunito_light">fonts/nunito.light.ttf</string>
+    <string name="nunito_regular">fonts/nunito.bold.ttf</string>
+</resources>

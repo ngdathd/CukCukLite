@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rlRetry"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="@dimen/padding_small">
+
+    <ImageView
+        android:id="@+id/icRefresh"
+        android:layout_width="@dimen/refresh_button_size"
+        android:layout_height="@dimen/refresh_button_size"
+        android:clickable="false"
+        android:contentDescription="@string/image_description"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/ic_refresh_blue" />
+
+    <TextView
+        android:id="@+id/tvRetry"
+        style="@style/TextViewNormal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:clickable="false"
+        android:text="@string/touch_here_to_retry"
+        android:textColor="@color/colorBluePrimary" />
+</LinearLayout>

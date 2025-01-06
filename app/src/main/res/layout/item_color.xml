@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ImageButton xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/btnColor"
+    android:layout_width="@dimen/dish_image_width"
+    android:layout_height="@dimen/dish_image_height"
+    android:layout_gravity="center"
+    android:layout_margin="@dimen/margin_small"
+    android:background="@null"
+    android:contentDescription="@string/image_description" />

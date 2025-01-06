@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lnContent"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/item_report_height"
+    android:background="@drawable/bg_white_no_border_no_radius_selector"
+    android:orientation="horizontal"
+    tools:ignore="MissingDefaultResource">
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/margin_normal"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            tools:ignore="NestedWeights">
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/TextViewNormal"/>
+
+            <TextView
+                android:id="@+id/tvAmount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:textColor="@color/colorPrimary"
+                style="@style/TextViewNormal"/>
+
+            <ImageView
+                android:layout_width="@dimen/iv_drop_down_w"
+                android:layout_height="@dimen/iv_drop_down_w"
+                android:layout_gravity="center_vertical"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/ic_enter"
+                android:contentDescription="@string/image_description" />
+        </LinearLayout>
+        <View
+            android:id="@+id/lineBottom"
+            android:layout_width="match_parent"
+            android:layout_height="0.6dp"
+            android:background="@color/dividerColorGray" />
+    </LinearLayout>
+</LinearLayout>

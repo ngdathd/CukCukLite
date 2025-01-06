@@ -1,0 +1,321 @@
+[
+  {
+    "RestaurantTypeId": 1,
+    "RestaurantName": "Trà đá",
+    "Dishes": [
+      {
+        "DishId": "e01c7781-bbc5-45df-9244-d01d369d42f3",
+        "DishName": "Trà đá",
+        "Price": 3000,
+        "UnitId": "aa64bf43-9cf1-43d7-b3a8-ea2235441ca5",
+        "ColorCode": "#26C6DA",
+        "IconPath": "_2_tra_da.png",
+        "IsSale": true
+      },
+      {
+        "DishId": "d0b0a8f2-e015-4b42-9e6e-bbb2d7d2b49d",
+        "DishName": "Mía đá",
+        "Price": 5000,
+        "UnitId": "aa64bf43-9cf1-43d7-b3a8-ea2235441ca5",
+        "ColorCode": "#039BE5",
+        "IconPath": "_2_mia_da.png",
+        "IsSale": true
+      },
+      {
+        "DishId": "ea33e8d7-ffa4-43d6-bea3-f6958105f8ad",
+        "DishName": "Cocacola",
+        "Price": 10000,
+        "UnitId": "732854ae-8fe5-4eb5-890f-bf98f6fde6ed",
+        "ColorCode": "#6D4C41",
+        "IconPath": "_7_cocacola.png",
+        "IsSale": true
+      },
+      {
+        "DishId": "da641b84-9b87-4287-95c7-a28851a834e4",
+        "DishName": "Thuốc lá",
+        "Price": 10000,
+        "UnitId": "9e213f32-002e-4945-afd9-747587bf4b46",
+        "ColorCode": "#00897B",
+        "IconPath": "_91_thuoc_la.png",
+        "IsSale": true
+      },
+      {
+        "DishId": "1a22b15e-067d-4e71-8956-d31e4cca0b73",
+        "DishName": "Hướng dương",
+        "Price": 5000,
+        "UnitId": "4ca415c5-2fc2-410e-883c-fc568be0e2e2",
+        "ColorCode": "#F44336",
+        "IconPath": "_991_huong_duong.png",
+        "IsSale": true
+      }
+    ],
+    "Units": [
+      {
+        "UnitId": "9e213f32-002e-4945-afd9-747587bf4b46",
+        "UnitName": "Bao"
+      },
+      {
+        "UnitId": "aa64bf43-9cf1-43d7-b3a8-ea2235441ca5",
+        "UnitName": "Cốc"
+      },
+      {
+        "UnitId": "732854ae-8fe5-4eb5-890f-bf98f6fde6ed",
+        "UnitName": "Chai"
+      },
+      {
+        "UnitId": "4ca415c5-2fc2-410e-883c-fc568be0e2e2",
+        "UnitName": "Đĩa"
+      }
+    ]
+  },
+  {
+    "RestaurantTypeId": 2,
+    "RestaurantName": "Xôi",
+    "Dishes": [
+      {
+        "DishId": "65905ee1-9f50-481a-884c-12b878f94517",
+        "DishName": "Xôi xéo",
+        "Price": 10000,
+        "UnitId": "0a1fa5ba-b154-42c5-86e2-a772ff710fe0",
+        "ColorCode": "#26C6DA",
+        "IconPath": "_8_xoi_xeo.png",
+        "IsSale": true
+      },
+      {
+        "DishId": "5e88a0c6-a6d7-47a9-95c3-96b125ad40cc",
+        "DishName": "Xôi gấc",
+        "Price": 10000,
+        "UnitId": "0a1fa5ba-b154-42c5-86e2-a772ff710fe0",
+        "ColorCode": "#0D47A1",
+        "IconPath": "_8_xoi_gac.png",
+        "IsSale": true
+      },
+      {
+        "DishId": "bb3d530b-23fc-48f8-a9a8-0a47f5d6db1e",
+        "DishName": "Xôi lạc",
+        "Price": 10000,
+        "UnitId": "0a1fa5ba-b154-42c5-86e2-a772ff710fe0",
+        "ColorCode": "#43A047",
+        "IconPath": "_8_xoi_lac.png",
+        "IsSale": true
+      },
+      {
+        "DishId": "2eb0d1d5-a07b-4be8-b01d-c6bb8d5f4f28",
+        "DishName": "Xôi thập cẩm",
+        "Price": 10000,
+        "UnitId": "0a1fa5ba-b154-42c5-86e2-a772ff710fe0",
+        "ColorCode": "#212121",
+        "IconPath": "_8_xoi_thap-cam.png",
+        "IsSale": true
+      },
+      {
+        "DishId": "02a60c62-e929-450d-ba7f-e1e43e44b64f",
+        "DishName": "Xôi trứng",
+        "Price": 10000,
+        "UnitId": "0a1fa5ba-b154-42c5-86e2-a772ff710fe0",
+        "ColorCode": "#8D6E63",
+        "IconPath": "_8_xoi_trung.png",
+        "IsSale": true
+      }
+    ],
+    "Units": [
+      {
+        "UnitId": "0a1fa5ba-b154-42c5-86e2-a772ff710fe0",
+        "UnitName": "Gói"
+      }
+    ]
+  },
+  {
+    "RestaurantTypeId": 3,
+    "RestaurantName": "Bún",
+    "Dishes": [
+      {
+        "DishId": "f6152ede-4500-42b5-a958-3618fc75c3f7",
+        "DishName": "Bún bò",
+        "Price": 25000,
+        "UnitId": "88d1ee87-5747-4607-919d-ffaa6090892a",
+        "ColorCode": "#2E7D32",
+        "IconPath": "_9_bun_nam_bo.png",
+        "IsSale": true
+      },
+      {
+        "DishId": "8cfa907f-9c2c-45ae-92e6-2933afcf9a0c",
+        "DishName": "Bún riêu cua",
+        "Price": 25000,
+        "UnitId": "88d1ee87-5747-4607-919d-ffaa6090892a",
+        "ColorCode": "#64DD17",
+        "IconPath": "_3_bun_rieu_cua.png",
+        "IsSale": true
+      },
+      {
+        "DishId": "9ab0e35c-9d05-4e57-aab5-6f3593b3de33",
+        "DishName": "Bún đậu",
+        "Price": 25000,
+        "UnitId": "88d1ee87-5747-4607-919d-ffaa6090892a",
+        "ColorCode": "#EC407A",
+        "IconPath": "_9_bun_dau.png",
+        "IsSale": true
+      },
+      {
+        "DishId": "b91fc35f-04da-4d8b-b5e8-5315f1403bd5",
+        "DishName": "Bún mẹt",
+        "Price": 25000,
+        "UnitId": "88d1ee87-5747-4607-919d-ffaa6090892a",
+        "ColorCode": "#FFB300",
+        "IconPath": "_3_bun_met.png",
+        "IsSale": true
+      },
+      {
+        "DishId": "7cc14f44-e210-45a0-a84a-f1e83473d98e",
+        "DishName": "Bún canh",
+        "Price": 25000,
+        "UnitId": "88d1ee87-5747-4607-919d-ffaa6090892a",
+        "ColorCode": "#64B5F6",
+        "IconPath": "_3_bun_canh.png",
+        "IsSale": true
+      }
+    ],
+    "Units": [
+      {
+        "UnitId": "88d1ee87-5747-4607-919d-ffaa6090892a",
+        "UnitName": "Bát"
+      }
+    ]
+  },
+  {
+    "RestaurantTypeId": 4,
+    "RestaurantName": "Chè",
+    "Dishes": [
+      {
+        "DishId": "34c78491-2549-44f6-a45e-55af90033af2",
+        "DishName": "Chè đậu xanh",
+        "Price": 10000,
+        "UnitId": "aa64bf43-9cf1-43d7-b3a8-ea2235441ca5",
+        "ColorCode": "#0D47A1",
+        "IconPath": "_61_che_dau_xanh.png",
+        "IsSale": true
+      },
+      {
+        "DishId": "943af169-198c-4048-80d0-6d70c75479d1",
+        "DishName": "Chè đỗ đen",
+        "Price": 10000,
+        "UnitId": "aa64bf43-9cf1-43d7-b3a8-ea2235441ca5",
+        "ColorCode": "#6D4C41",
+        "IconPath": "_61_che_do_den.png",
+        "IsSale": true
+      },
+      {
+        "DishId": "88b0cfd3-6c84-4625-baaa-6f21f8af7ff6",
+        "DishName": "Chè thái",
+        "Price": 13000,
+        "UnitId": "aa64bf43-9cf1-43d7-b3a8-ea2235441ca5",
+        "ColorCode": "#00897B",
+        "IconPath": "_61_che_thai.png",
+        "IsSale": true
+      },
+      {
+        "DishId": "384432f5-f69e-41ed-8a1b-8806c89c5809",
+        "DishName": "Chè thập cẩm",
+        "Price": 10000,
+        "UnitId": "aa64bf43-9cf1-43d7-b3a8-ea2235441ca5",
+        "ColorCode": "#26C6DA",
+        "IconPath": "_3_bun_met.png",
+        "IsSale": true
+      },
+      {
+        "DishId": "1b768158-16a2-41a5-911d-2d996a530480",
+        "DishName": "Chè hoa quả",
+        "Price": 10000,
+        "UnitId": "88d1ee87-5747-4607-919d-ffaa6090892a",
+        "ColorCode": "#5F7C8A",
+        "IconPath": "_8_che_hoa_qua.png",
+        "IsSale": true
+      }
+    ],
+    "Units": [
+      {
+        "UnitId": "aa64bf43-9cf1-43d7-b3a8-ea2235441ca5",
+        "UnitName": "Cốc"
+      },
+      {
+        "UnitId": "88d1ee87-5747-4607-919d-ffaa6090892a",
+        "UnitName": "Bát"
+      }
+    ]
+  },
+  {
+    "RestaurantTypeId": 5,
+    "RestaurantName": "Khác",
+    "Dishes": [],
+    "Units": [
+      {
+        "UnitId": "9e213f32-002e-4945-afd9-747587bf4b46",
+        "UnitName": "Bao"
+      },
+      {
+        "UnitId": "88d1ee87-5747-4607-919d-ffaa6090892a",
+        "UnitName": "Bát"
+      },
+      {
+        "UnitId": "26ab648a-ea9b-41c8-904b-828b3690268a",
+        "UnitName": "Cái"
+      },
+      {
+        "UnitId": "732854ae-8fe5-4eb5-890f-bf98f6fde6ed",
+        "UnitName": "Chai"
+      },
+      {
+        "UnitId": "7561bc39-d6f0-427f-9040-00dac066d0a9",
+        "UnitName": "Chén"
+      },
+      {
+        "UnitId": "aa64bf43-9cf1-43d7-b3a8-ea2235441ca5",
+        "UnitName": "Cốc"
+      },
+      {
+        "UnitId": "4ca415c5-2fc2-410e-883c-fc568be0e2e2",
+        "UnitName": "Đĩa"
+      },
+      {
+        "UnitId": "2432dcd4-9024-4cf9-87fb-271f7f8ff3d7",
+        "UnitName": "Điếu"
+      },
+      {
+        "UnitId": "0a1fa5ba-b154-42c5-86e2-a772ff710fe0",
+        "UnitName": "Gói"
+      },
+      {
+        "UnitId": "150b9f24-5714-4c64-b0c9-dfc6686a1a46",
+        "UnitName": "Lạng"
+      },
+      {
+        "UnitId": "a77caef6-b584-4fe6-9f1c-cf488fbf38af",
+        "UnitName": "Lon"
+      },
+      {
+        "UnitId": "7c1ab23b-d6fa-4ff2-b5e8-07ebad5d3445",
+        "UnitName": "Phần"
+      },
+      {
+        "UnitId": "9b36ee96-8255-4c7b-9416-15aab4903480",
+        "UnitName": "Phong"
+      },
+      {
+        "UnitId": "470e37ab-d088-4a3a-a34d-9f6bc21a54c3",
+        "UnitName": "Quả"
+      },
+      {
+        "UnitId": "220c9bd0-0e70-493d-aa22-4cc5cf3f862a",
+        "UnitName": "Xuất"
+      },
+      {
+        "UnitId": "65a1fb6f-4f03-4235-baa8-9e3e0849f30b",
+        "UnitName": "Tô"
+      },
+      {
+        "UnitId": "791266d6-b88c-4bbc-9c52-f8afcc4759e9",
+        "UnitName": "Vỉ"
+      }
+    ]
+  }
+]

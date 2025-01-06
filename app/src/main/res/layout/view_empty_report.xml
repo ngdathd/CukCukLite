@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/lnEmptyReport"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:gravity="center_horizontal"
     android:orientation="vertical">
 
     <ImageView
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:contentDescription="@string/img_content_description"
-        android:scaleType="fitXY"
-        android:src="@drawable/ic_menu_chart" />
+        android:layout_width="@dimen/iv_empty_report_w"
+        android:layout_height="@dimen/iv_empty_report_h"
+        app:srcCompat="@drawable/ic_diagram" />
 
     <TextView
+        style="@style/TextViewNormal"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/msg_empty_report"
-        android:textColor="@color/color_text_main" />
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/margin_small"
+        android:text="@string/msg_empty_report" />
 </LinearLayout>

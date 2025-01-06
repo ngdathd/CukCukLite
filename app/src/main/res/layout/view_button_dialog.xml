@@ -2,35 +2,35 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/button_background_gray_light"
+    android:layout_height="wrap_content"
+    android:background="@color/colorGrayLight"
     android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/height_button_dialog"
-        android:layout_marginTop="@dimen/margin_normal"
-        android:layout_marginBottom="@dimen/margin_normal"
-        android:gravity="right"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_marginBottom="@dimen/margin_small"
+        android:gravity="end"
         android:orientation="horizontal"
-        tools:ignore="RtlHardcoded,UselessParent">
+        tools:ignore="UselessParent">
 
         <Button
             android:id="@+id/btnCancelDialog"
             style="@style/DialogNegativeButtonStyle"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginRight="@dimen/margin_medium_small"
-            android:minWidth="90dp"
-            android:text="@string/button_cancel" />
+            android:layout_height="@dimen/action_height"
+            android:layout_marginEnd="@dimen/margin_small"
+            android:minWidth="@dimen/btn_min_w"
+            android:text="@string/cancel" />
 
         <Button
             android:id="@+id/btnAcceptDialog"
             style="@style/DialogPositiveButtonStyle"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginRight="@dimen/margin_medium"
-            android:minWidth="90dp"
-            android:text="@string/button_accept" />
+            android:layout_height="@dimen/action_height"
+            android:layout_marginEnd="@dimen/margin_small"
+            android:minWidth="@dimen/btn_min_w"
+            android:text="@string/ok" />
     </LinearLayout>
 </LinearLayout>

@@ -1,38 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="vn.misa.nadat.cukcuklite">
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.REAL_GET_TASKS"
+        tools:ignore="ProtectedPermissions" />
 
     <application
-        android:name=".CukCukLiteApp"
+        android:name=".CukCukLiteApplication"
         android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        tools:targetApi="31" >
         <activity
-            android:name=".ui.main.MainActivity"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".ui.choosedish.ChooseDishActivity">
+            android:name=".screen.start.StartAppActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.addeditdish.AddEditDishActivity" />
-        <activity android:name=".ui.unit.UnitActivity" />
-        <activity android:name=".ui.payment.PaymentActivity" />
-        <activity android:name=".ui.revenue.ReportRevenueActivity" />
-        <activity android:name=".ui.splash.SplashActivity" >
-            <!--<intent-filter>-->
-                <!--<action android:name="android.intent.action.MAIN" />-->
+        <activity
+            android:name=".screen.start.intro.IntroActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".screen.main.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".screen.chooserestauranttype.ChooseRestaurantTypeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".screen.choosedishdefault.ChooseDishDefaultActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".screen.adddish.AddDishActivity"
+            android:windowSoftInputMode="adjustResize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".screen.selectunit.SelectUnitActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".screen.dishorder.DishOrderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".screen.pay.PayActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".screen.reportdetail.ReportDetailActivity"
+            android:screenOrientation="portrait" />
 
-                <!--<category android:name="android.intent.category.LAUNCHER" />-->
-            <!--</intent-filter>-->
+        <activity android:name="com.facebook.FacebookActivity"
+            android:configChanges=
+                "keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
         </activity>
-        <activity android:name=".ui.chooserestaurant.ChooseRestaurantTypeActivity" />
+
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
+        <meta-data android:name="com.facebook.sdk.ClientToken" android:value="@string/facebook_client_token"/>
     </application>
 
 </manifest>
