@@ -21,7 +21,7 @@
 
 ### Chạy thử
 
-- Tài khoản: **dev1@gmail.com**
+- Tài khoản: **dev@gmail.com**
 - Mật khẩu: **123456**
 
 #### Màn hình
@@ -32,5 +32,5 @@
 
 #### Firebase
 
-
+https://github.com/user-attachments/assets/a8cc59a6-9de1-4d3c-abab-fea84d22e844
 
