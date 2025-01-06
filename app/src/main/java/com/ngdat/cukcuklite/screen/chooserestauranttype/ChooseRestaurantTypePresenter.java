@@ -1,6 +1,7 @@
 package com.ngdat.cukcuklite.screen.chooserestauranttype;
 
 import android.content.Context;
+import android.util.Log;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonSyntaxException;
@@ -136,12 +137,12 @@ public class ChooseRestaurantTypePresenter implements IChooseRestaurantTypeContr
                     mFirebaseManager.addDishesToFirebase(dishes, new IFirebaseRealTime.IFirebaseDataCallBack() {
                         @Override
                         public void onSuccess() {
-
+                            Log.i("ChooseRestaurantTypePresenter", "onSuccess: ");
                         }
 
                         @Override
                         public void onFailed() {
-
+                            Log.i("ChooseRestaurantTypePresenter", "onFailed: ");
                         }
                     });
                     //Thêm các món ăn váo cơ sở dữ liệu

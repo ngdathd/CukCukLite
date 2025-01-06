@@ -141,7 +141,7 @@ public class LoginFragment extends BaseFragment
                                         LoginManager.getInstance().unregisterCallback(callbackManager);
                                         isFinishLoadData = true;
                                         if (isFinishAnimation) {
-                                            if (mDishes.isEmpty()) {
+                                            if (mDishes == null || mDishes.isEmpty()) {
                                                 startActivity(new Intent(getBaseActivity(), ChooseRestaurantTypeActivity.class));
                                                 getActivity().finish();
                                             } else {
