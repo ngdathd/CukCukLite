@@ -250,7 +250,7 @@ public class DishDataSource implements IDishDataSource, IDBUtils.ITableDishUtils
     @Override
     public List<Dish> getAllDish() {
         try {
-            if (mDishes != null && mDishes.size() > 0) {
+            if (mDishes != null && !mDishes.isEmpty()) {
                 return mDishes;
             } else {
                 List<Dish> dishes = new ArrayList<>();
@@ -388,7 +388,7 @@ public class DishDataSource implements IDishDataSource, IDBUtils.ITableDishUtils
     public List<String> getAllDishId() {
         try {
             List<String> dishIds = new ArrayList<>();
-            if (mDishes != null) {
+            if (mDishes != null && !mDishes.isEmpty()) {
                 for (Dish dish : mDishes) {
                     if (dish.isSale()) {
                         dishIds.add(dish.getDishId());

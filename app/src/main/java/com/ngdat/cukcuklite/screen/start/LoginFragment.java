@@ -28,12 +28,14 @@ import com.ngdat.cukcuklite.base.animation.ScreenAnimation;
 import com.ngdat.cukcuklite.base.fragment.BaseFragment;
 import com.ngdat.cukcuklite.data.local.bill.BillDataSource;
 import com.ngdat.cukcuklite.data.local.dish.DishDataSource;
+import com.ngdat.cukcuklite.data.local.prefs.SharedPrefersManager;
 import com.ngdat.cukcuklite.data.local.unit.UnitDataSource;
 import com.ngdat.cukcuklite.data.models.Bill;
 import com.ngdat.cukcuklite.data.models.BillDetail;
 import com.ngdat.cukcuklite.data.models.Dish;
 import com.ngdat.cukcuklite.data.models.Unit;
 import com.ngdat.cukcuklite.data.models.User;
+import com.ngdat.cukcuklite.data.models.UserInstance;
 import com.ngdat.cukcuklite.data.service.EmailLoginListener;
 import com.ngdat.cukcuklite.data.service.EmailLoginServices;
 import com.ngdat.cukcuklite.data.service.FacebookLoginServices;
@@ -132,6 +134,21 @@ public class LoginFragment extends BaseFragment
                                     User user = dataSnapshot.getValue(User.class);
                                     if (user != null) {
                                         loginSuccess(user);
+                                        UserInstance.getInstance().setName(user.getName());
+                                        UserInstance.getInstance().setEmail(user.getEmail());
+                                        UserInstance.getInstance().setUid(user.getUserId());
+                                        UserInstance.getInstance().setKey(firebaseUser.getUid());
+                                        LoginManager.getInstance().unregisterCallback(callbackManager);
+                                        isFinishLoadData = true;
+                                        if (isFinishAnimation) {
+                                            if (mDishes.isEmpty()) {
+                                                startActivity(new Intent(getBaseActivity(), ChooseRestaurantTypeActivity.class));
+                                                getActivity().finish();
+                                            } else {
+                                                startActivity(new Intent(getBaseActivity(), MainActivity.class));
+                                                getActivity().finish();
+                                            }
+                                        }
                                     } else {
                                         isFinishLoadData = true;
                                         if (isFinishAnimation) {
@@ -290,40 +307,29 @@ public class LoginFragment extends BaseFragment
 
     private void loginSuccess(User user) {
         try {
-            if (user.getUnits() != null) {
+            SharedPrefersManager.getInstance(this.getContext()).setIsLoginSuccess(true);
+            if (user.getUnits() != null && !user.getUnits().values().isEmpty()) {
                 mUnits = new ArrayList<>(user.getUnits().values());
                 for (Unit unit : mUnits) {
                     mUnitDataSource.addUnit(unit);
                 }
             }
-            if (user.getDishes() != null) {
+            if (user.getDishes() != null && !user.getDishes().values().isEmpty()) {
                 mDishes = new ArrayList<>(user.getDishes().values());
                 for (Dish dish : mDishes) {
                     mDishDataSource.addDish(dish);
                 }
             }
-            if (user.getBills() != null) {
+            if (user.getBills() != null && !user.getBills().values().isEmpty()) {
                 mBills = new ArrayList<>(user.getBills().values());
                 for (BillDetail billDetail : mBillDetails) {
                     mBillDataSource.addBillDetail(billDetail);
                 }
             }
-            if (user.getBillDetails() != null) {
+            if (user.getBillDetails() != null && !user.getBillDetails().values().isEmpty()) {
                 mBillDetails = new ArrayList<>(user.getBillDetails().values());
                 for (Bill bill : mBills) {
                     mBillDataSource.addBill(bill);
-                }
-            }
-
-            LoginManager.getInstance().unregisterCallback(callbackManager);
-            isFinishLoadData = true;
-            if (isFinishAnimation) {
-                if (mDishes.isEmpty()) {
-                    startActivity(new Intent(getBaseActivity(), ChooseRestaurantTypeActivity.class));
-                    getActivity().finish();
-                } else {
-                    startActivity(new Intent(getBaseActivity(), MainActivity.class));
-                    getActivity().finish();
                 }
             }
         } catch (Exception e) {

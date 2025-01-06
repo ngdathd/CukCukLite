@@ -6,6 +6,9 @@ import android.net.Uri;
 import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+
+import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
@@ -21,6 +24,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import com.google.android.material.navigation.NavigationView;
 import com.ngdat.cukcuklite.R;
 import com.ngdat.cukcuklite.data.local.prefs.SharedPrefersManager;
+import com.ngdat.cukcuklite.data.models.UserInstance;
 import com.ngdat.cukcuklite.screen.adddish.AddDishActivity;
 import com.ngdat.cukcuklite.screen.dishorder.DishOrderActivity;
 import com.ngdat.cukcuklite.screen.menu.MenuFragment;
@@ -45,6 +49,10 @@ public class MainActivity extends AppCompatActivity implements IMainContract.IVi
     private ImageView btnAdd;
     private boolean mIsSale;
     private MainPresenter mPresenter;
+
+    private View mHeaderView;
+    private TextView nameUser;
+    private TextView emailUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -84,6 +92,10 @@ public class MainActivity extends AppCompatActivity implements IMainContract.IVi
                 }
             }
         });
+        UserInstance u = UserInstance.getInstance();
+        Log.i(TAG, "initEvents: " + UserInstance.getInstance());
+        nameUser.setText(UserInstance.getInstance().getName());
+        emailUser.setText(UserInstance.getInstance().getEmail());
     }
 
     /**
@@ -107,6 +119,12 @@ public class MainActivity extends AppCompatActivity implements IMainContract.IVi
             mIsSale = true;
             mNavigator.addFragment(R.id.flMainContainer, SaleFragment.newInstance(), false, Navigator.NavigateAnim.NONE, SaleFragment.class.getSimpleName());
             tvTitle.setText(R.string.sale);
+
+            mHeaderView = LayoutInflater.from(this).inflate(R.layout.nav_header_main, null);
+            navView.addHeaderView(mHeaderView);
+
+            nameUser = (TextView) mHeaderView.findViewById(R.id.txt_name);
+            emailUser = (TextView) mHeaderView.findViewById(R.id.txt_email);
         } catch (Exception e) {
             e.printStackTrace();
         }
